@@ -520,11 +520,15 @@ main {
 }
 
 .page-head .page-intro {
-  max-width: 34rem;
+  max-width: 38rem;
   margin-top: var(--space-5);
   color: var(--ink-soft);
   font-size: var(--text-md);
   line-height: 1.75;
+}
+
+.page-head .text-link {
+  margin-top: var(--space-4);
 }
 
 .page-head-tight {
