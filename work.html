@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Selected projects by David Wong: full-stack products built around real workflows, from event discovery to nonprofit e-commerce."
+    />
+    <meta name="theme-color" content="#201d1a" />
+    <title>Work · David Wong</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=DM+Mono:wght@300;400;500&family=Newsreader:ital,wght@0,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- SHARED HEADER (keep in sync: index.html, work.html, archive.html, about.html) -->
+    <header class="site-nav" data-nav>
+      <a class="wordmark" href="./index.html">david wong</a>
+      <ul>
+        <li><a href="./work.html" aria-current="page">work</a></li>
+        <li><a href="./archive.html">archive</a></li>
+        <li><a href="./about.html">about</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </header>
+    <!-- END SHARED HEADER -->
+
+    <main id="main">
+      <div class="page-head">
+        <p class="eyebrow reveal">Work · 2018—2024</p>
+        <h1 class="reveal">Projects built around real workflows.</h1>
+        <p class="page-intro reveal">
+          Full-stack products that organize information, make discovery easier,
+          and connect technology to a clear, human need.
+        </p>
+      </div>
+
+      <nav class="index-list" aria-label="Project index">
+        <a class="index-row reveal" href="#p5c-events">
+          <span class="index-num">01</span>
+          <span class="index-year">2023</span>
+          <span class="index-discipline">full-stack · ai</span>
+          <span class="index-title">P-5C Events</span>
+          <span class="index-preview" style="--preview-tint: var(--accent-blue-soft)">01</span>
+        </a>
+        <a class="index-row reveal" href="#musicmap">
+          <span class="index-num">02</span>
+          <span class="index-year">2024</span>
+          <span class="index-discipline">full-stack</span>
+          <span class="index-title">MusicMap</span>
+          <span class="index-preview" style="--preview-tint: var(--accent-teal-soft)">02</span>
+        </a>
+        <a class="index-row reveal" href="#itara">
+          <span class="index-num">03</span>
+          <span class="index-year">2018—2023</span>
+          <span class="index-discipline">product · e-commerce</span>
+          <span class="index-title">Itara</span>
+          <span class="index-preview" style="--preview-tint: var(--accent-olive-soft)">03</span>
+        </a>
+      </nav>
+
+      <div class="work-spreads">
+        <article class="project-spread reveal" id="p5c-events">
+          <p class="index-num">01</p>
+          <div>
+            <h2>P-5C Events</h2>
+            <p class="project-meta">P-ai at the Claremont Colleges · June 2023</p>
+            <p class="project-copy">
+              A full-stack event discovery platform for students across the five
+              Claremont Colleges. It pulled events straight from campus emails,
+              used the OpenAI API to turn that mess into structured descriptions
+              and labels, and matched students to events based on what they
+              actually said they were interested in. No forms, just plain language.
+            </p>
+            <p class="project-stack">React · Flask · SQLAlchemy · OpenAI API · Docker</p>
+          </div>
+        </article>
+
+        <article class="project-spread reveal" id="musicmap">
+          <p class="index-num">02</p>
+          <div>
+            <h2>MusicMap</h2>
+            <p class="project-meta">Software engineering project · 2024</p>
+            <p class="project-copy">
+              A web app for sharing music through place: songs tied to specific
+              locations and the stories behind them, laid out on an interactive
+              map. I built the React front end and worked on the backend data
+              integration connecting songs, stories, and places into one
+              experience.
+            </p>
+            <p class="project-stack">React · MongoDB</p>
+          </div>
+        </article>
+
+        <article class="project-spread reveal" id="itara">
+          <p class="index-num">03</p>
+          <div>
+            <h2>Itara</h2>
+            <p class="project-meta">Product &amp; technology · 2018—2023</p>
+            <p class="project-copy">
+              An e-commerce platform for a nonprofit selling artisan products
+              made by Rwandan genocide survivors. I integrated Shopify, built
+              the storefront by hand, and helped keep the sales and inventory
+              systems running behind it, turning a mission-driven retail
+              operation into a working digital channel.
+            </p>
+            <p class="project-stack">Shopify · JavaScript · HTML · CSS</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="skills-line reveal" aria-label="Technical skills">
+        <span>Python</span><span>SQL</span><span>JavaScript</span><span>React</span>
+        <span>Flask</span><span>Power BI</span><span>Docker</span>
+      </div>
+    </main>
+
+    <!-- SHARED FOOTER (keep in sync: index.html, work.html, archive.html, about.html) -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-col">
+        <p>David Wong</p>
+        <p>Silicon Valley · <span data-year></span></p>
+      </div>
+      <div class="footer-col">
+        <a href="mailto:davidmwong2021@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/davidwongg/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/dmwong25" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-status">Currently: PwC · DAT Tech &amp; Data</p>
+      </div>
+    </footer>
+    <!-- END SHARED FOOTER -->
+  </body>
+</html>

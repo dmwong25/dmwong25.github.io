@@ -10,7 +10,14 @@ npm start
 
 Then open `http://127.0.0.1:4173`.
 
-The page uses no framework or build step. Content lives in `index.html`, presentation in `styles.css`, and interactions in `app.js`.
+The site uses no framework or build step. It's four static pages sharing one stylesheet and one script:
+
+- `index.html` — home
+- `work.html` — project index and write-ups
+- `archive.html` — photograph archive
+- `about.html` — bio, experience, and credentials
+
+Presentation lives in `styles.css`; shared interactions (scroll reveal, nav state, the photo lightbox) live in `site.js`. The header/nav and footer markup is duplicated across the four pages (no server-side includes on GitHub Pages) — keep them in sync using the `SHARED HEADER` / `SHARED FOOTER` comments in each file.
 
 ## Photography
 
