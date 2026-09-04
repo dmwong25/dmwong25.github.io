@@ -513,7 +513,8 @@ main {
   padding: var(--space-9) var(--gutter) var(--space-8);
 }
 
-.page-head h1 {
+.page-head h1,
+.page-head h2 {
   max-width: 40rem;
   font-size: var(--text-3xl);
 }
@@ -524,6 +525,70 @@ main {
   color: var(--ink-soft);
   font-size: var(--text-md);
   line-height: 1.75;
+}
+
+.page-head-tight {
+  padding-top: 0;
+}
+
+.current-work {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter) var(--space-8);
+}
+
+.current-work-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.current-work-head .eyebrow {
+  margin-bottom: var(--space-3);
+}
+
+.current-work-head h2 {
+  font-size: var(--text-2xl);
+}
+
+.current-meta {
+  color: var(--ink-faint);
+  font-size: var(--text-xs);
+}
+
+.current-copy {
+  max-width: 42rem;
+  margin-top: var(--space-5);
+  color: var(--ink-soft);
+  font-size: var(--text-md);
+  line-height: 1.8;
+}
+
+.current-points {
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.current-points li {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.current-points li span {
+  color: var(--accent-blue);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: lowercase;
 }
 
 .index-list {
@@ -646,26 +711,41 @@ main {
 /* ==========================================================================
    Archive (photography)
    ========================================================================== */
-.photo-grid {
-  columns: 3 19rem;
-  column-gap: clamp(1rem, 2.2vw, 2.4rem);
+.photo-collection {
   max-width: 96rem;
   margin: 0 auto;
   padding: 0 var(--gutter) var(--space-9);
 }
 
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: clamp(1.6rem, 3vw, 2.6rem) clamp(1rem, 2.2vw, 2.4rem);
+}
+
+.js .photo-grid {
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(1rem, 2.2vw, 2.4rem);
+}
+
+.photo-col {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: clamp(1.6rem, 3vw, 2.6rem);
+}
+
 .photo-item {
   display: block;
   width: 100%;
-  margin: 0 0 clamp(1.6rem, 3vw, 2.6rem);
-  break-inside: avoid;
+  margin: 0;
 }
 
-.photo-item.is-wide {
-  column-span: all;
-  max-width: 56rem;
-  margin-right: auto;
-  margin-left: auto;
+.photo-fullbleed {
+  max-width: 58rem;
+  margin: 0 auto clamp(1.6rem, 3vw, 2.6rem);
 }
 
 .photo-button {
@@ -974,11 +1054,7 @@ body.lightbox-open {
     gap: var(--space-3);
   }
 
-  .photo-grid {
-    columns: 1;
-  }
-
-  .photo-item.is-wide {
+  .photo-fullbleed {
     max-width: 100%;
   }
 

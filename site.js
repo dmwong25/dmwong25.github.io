@@ -24,6 +24,65 @@ if (reduceMotion || !("IntersectionObserver" in window)) {
   revealItems.forEach((item) => revealObserver.observe(item));
 }
 
+const photoGrids = [...document.querySelectorAll(".photo-grid")];
+
+if (photoGrids.length) {
+  photoGrids.forEach((grid) => {
+    grid._items = [...grid.children].filter((el) => el.classList.contains("photo-item"));
+  });
+
+  const GRID_GAP = 24;
+  const CAPTION_ALLOWANCE = 30;
+
+  const columnCountFor = (width) => {
+    if (width < 900) return 1;
+    if (width < 1300) return 2;
+    return 3;
+  };
+
+  const layoutGrid = (grid) => {
+    const items = grid._items;
+    if (!items || !items.length) return;
+
+    const width = grid.clientWidth;
+    const cols = columnCountFor(width);
+    const colWidth = (width - GRID_GAP * (cols - 1)) / cols;
+
+    const columns = Array.from({ length: cols }, () => ({
+      height: 0,
+      el: document.createElement("div"),
+    }));
+    columns.forEach((col) => col.el.classList.add("photo-col"));
+
+    items.forEach((item) => {
+      const img = item.querySelector("img");
+      const naturalWidth = Number(img.getAttribute("width")) || 1;
+      const naturalHeight = Number(img.getAttribute("height")) || 1;
+      const estimatedHeight = (colWidth * naturalHeight) / naturalWidth + CAPTION_ALLOWANCE;
+
+      const shortest = columns.reduce((a, b) => (a.height <= b.height ? a : b));
+      shortest.el.appendChild(item);
+      shortest.height += estimatedHeight + GRID_GAP;
+    });
+
+    grid.replaceChildren(...columns.map((col) => col.el));
+  };
+
+  const layoutAllGrids = () => photoGrids.forEach(layoutGrid);
+  layoutAllGrids();
+  window.addEventListener("load", layoutAllGrids);
+
+  let resizeTimer;
+  window.addEventListener(
+    "resize",
+    () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(layoutAllGrids, 150);
+    },
+    { passive: true },
+  );
+}
+
 const nav = document.querySelector("[data-nav]");
 
 if (nav) {
