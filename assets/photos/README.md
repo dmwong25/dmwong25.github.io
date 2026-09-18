@@ -8,4 +8,6 @@ To rebuild the copies from the selected originals:
 python scripts/process_portfolio_photos.py
 ```
 
-Gallery order, alternative text, and dates are maintained in the Photography section of `index.html`.
+Gallery order, alternative text, dates, stable frame IDs, and year-filter metadata are maintained in `archive.html`. The portrait remains in `about.html`; selected previews also appear in `index.html`.
+
+`small/` contains 640-pixel-wide responsive WebP copies generated from these metadata-free web images. Rebuild them with `python scripts/optimize_images.py` (Pillow required). Keep `srcset` and `sizes` on image tags when adding photos. The viewer uses the full-size `src`, while the browser selects a responsive source for thumbnails. Do not rename existing frame IDs, because homepage links point to them.

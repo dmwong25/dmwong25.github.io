@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="David Wong, data analyst and photographer. Notes on automation, revenue systems, and photographs from the last few years."
+      content="David Wong is a data analyst and photographer in Silicon Valley. Explore his work in data, automation, software, and photography."
     />
-    <meta name="theme-color" content="#201d1a" />
-    <title>David Wong</title>
+    <meta name="theme-color" content="#e9edf0" />
+    <title>David Wong — Work & Photography</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,131 +18,344 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./site.js" defer></script>
+    <link rel="canonical" href="https://dmwong25.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="David Wong" />
+    <meta property="og:title" content="David Wong — Work & Photography" />
+    <meta
+      property="og:description"
+      content="David Wong is a data analyst and photographer in Silicon Valley. Explore his work in data, automation, software, and photography."
+    />
+    <meta property="og:url" content="https://dmwong25.github.io/" />
+    <meta
+      property="og:image"
+      content="https://dmwong25.github.io/assets/photos/frame-16.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="A mountain valley photographed by David Wong"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="./theme.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- SHARED HEADER (keep in sync: index.html, work.html, archive.html, about.html) -->
+    <!-- SHARED HEADER -->
     <header class="site-nav" data-nav>
-      <a class="wordmark" href="./index.html">david wong</a>
-      <ul>
-        <li><a href="./work.html">work</a></li>
-        <li><a href="./archive.html">archive</a></li>
-        <li><a href="./about.html">about</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
+      <a class="wordmark" href="./index.html" aria-current="page"
+        >David Wong<span class="brand-dot">.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="./index.html" aria-current="page">Home</a></li>
+          <li><a href="./work.html">Work</a></li>
+          <li><a href="./archive.html">Photos</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./notes.html">Notes</a></li>
+          <li><a href="./recommendations.html">Favorites</a></li>
+        </ul>
+      </nav>
+      <a class="nav-contact" href="#contact"
+        >Contact <span aria-hidden="true">↗</span></a
+      >
     </header>
     <!-- END SHARED HEADER -->
 
-    <main id="main">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow reveal">david wong · silicon valley</p>
-          <h1 class="hero-name reveal">
-            Data analyst.<br />
-            <span class="serif-accent">Photographer.</span>
-          </h1>
-          <p class="hero-intro reveal">
-            I spend most weekdays making sense of revenue data at PwC and most
-            weekends looking through a viewfinder. This site is a little of both.
+    <main id="main" tabindex="-1">
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-topline">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> David Wong ·
+            Silicon Valley, CA
           </p>
-          <div class="hero-links reveal">
-            <a class="text-link" href="./work.html">See the work</a>
-            <a class="text-link" href="./archive.html">Browse the archive</a>
+          <p class="mono hero-edition">Work &amp; photography</p>
+        </div>
+        <div class="hero-heading">
+          <h1 id="intro-title">David<br /><em>Wong.</em></h1>
+          <div class="hero-aside">
+            <p>
+              I work with data at PwC in Silicon Valley. Outside of work, I take
+              photos and play golf. Here are some of my projects and
+              photographs.
+            </p>
+            <a class="text-link" href="./about.html"
+              >About me <span aria-hidden="true">↗</span></a
+            >
           </div>
         </div>
-        <figure class="hero-image reveal">
-          <div class="frame">
-            <img
-              src="./assets/photos/frame-03.webp"
+        <figure class="hero-image">
+          <div class="print-tab" aria-hidden="true"></div>
+          <a
+            href="./archive.html#frame-17"
+            aria-label="View Frame 17 in the photography archive"
+            ><img
+              srcset="
+                ./assets/photos/small/frame-17.webp  640w,
+                ./assets/photos/frame-17.webp       1800w
+              "
+              sizes="(max-width: 700px) 85vw, 45vw"
+              src="./assets/photos/frame-17.webp"
               width="1800"
-              height="1350"
-              decoding="async"
-              alt="An Alaska locomotive beside a lake and sunlit mountains"
-            />
-          </div>
-          <figcaption>Frame 03 · May 2024</figcaption>
+              height="1200"
+              fetchpriority="high"
+              alt="Snow-streaked mountains reflected in a still lake"
+            /><span class="image-cta">Photo archive ↗</span></a
+          >
+          <figcaption>
+            <span>Mountains &amp; water</span><span>07 / 2025</span>
+          </figcaption>
         </figure>
-      </section>
-
-      <section class="home-section">
-        <div class="home-section-head reveal">
-          <h2>Work</h2>
-          <a class="text-link" href="./work.html">Full index ↗</a>
-        </div>
-        <div class="teaser-list">
-          <a class="teaser-row reveal" href="./work.html#p5c-events">
-            <span class="index-num">01</span>
-            <span>2023</span>
-            <span class="teaser-title">P-5C Events</span>
-            <span class="teaser-go">View →</span>
-          </a>
-          <a class="teaser-row reveal" href="./work.html#musicmap">
-            <span class="index-num">02</span>
-            <span>2024</span>
-            <span class="teaser-title">MusicMap</span>
-            <span class="teaser-go">View →</span>
-          </a>
-          <a class="teaser-row reveal" href="./work.html#itara">
-            <span class="index-num">03</span>
-            <span>2018—2023</span>
-            <span class="teaser-title">Itara</span>
-            <span class="teaser-go">View →</span>
-          </a>
+        <div class="hero-footnote">
+          <p>Data analyst at PwC.<br /><span>Pomona College ’25.</span></p>
+          <a href="#explore" class="mono"
+            >Selected work <span aria-hidden="true">↓</span></a
+          >
         </div>
       </section>
 
-      <section class="home-section">
-        <div class="home-section-head reveal">
-          <h2>Archive</h2>
-          <a class="text-link" href="./archive.html">Full archive ↗</a>
+      <section class="home-section" id="explore" aria-labelledby="work-heading">
+        <div class="home-section-head">
+          <div>
+            <p class="eyebrow">Work</p>
+            <h2 id="work-heading">Selected projects.</h2>
+          </div>
+          <a class="text-link" href="./work.html"
+            >Explore my work <span aria-hidden="true">↗</span></a
+          >
         </div>
-        <ul class="archive-teaser-strip reveal" aria-label="Photograph preview">
-          <li>
-            <a href="./archive.html">
-              <div class="frame">
-                <img src="./assets/photos/frame-09.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="Long-exposure figures standing along a moonlit shoreline" />
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="./archive.html">
-              <div class="frame">
-                <img src="./assets/photos/frame-15.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A red-sailed boat crossing Hong Kong harbour" />
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="./archive.html">
-              <div class="frame">
-                <img src="./assets/photos/frame-21.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="A spaniel framed by white calla lilies" />
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="./archive.html">
-              <div class="frame">
-                <img src="./assets/photos/frame-33.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A rose garden glowing at sunset" />
-              </div>
-            </a>
-          </li>
-        </ul>
+        <a class="current-card" href="./work.html"
+          ><span class="eyebrow"
+            ><span class="status-dot" aria-hidden="true"></span> What I’m
+            working on</span
+          >
+          <h3>Data analysis<br />at PwC.</h3>
+          <div>
+            <p>
+              Revenue models, Python workflows, and AI-assisted automation at
+              PwC.
+            </p>
+            <span class="mono"
+              >PwC · DAT Tech &amp; Data
+              <span aria-hidden="true">↗</span></span
+            >
+          </div></a
+        >
+        <div class="project-cards">
+          <a class="project-card" href="./work.html#p5c-events"
+            ><div class="project-art art-events" aria-hidden="true">
+              <span class="art-label">Claremont Colleges</span
+              ><span class="events-mark">5C<span>↗</span></span
+              ><span class="art-bottom">Campus event discovery</span>
+            </div>
+            <div class="card-meta">
+              <span>01 / Full-stack · AI</span><span>2023</span>
+            </div>
+            <h3>P-5C Events <span aria-hidden="true">↗</span></h3>
+            <p>
+              An app that finds events in campus emails and matches them to
+              students’ interests.
+            </p></a
+          >
+          <a class="project-card" href="./work.html#musicmap"
+            ><div class="project-art art-music project-real-logo">
+              <img
+                src="./assets/projects/musicmap-logo.png"
+                width="2000"
+                height="232"
+                alt="MusicMap project logo"
+                loading="lazy"
+              /><span class="art-bottom"
+                >Original project identity · React / MongoDB</span
+              >
+            </div>
+            <div class="card-meta">
+              <span>02 / Full-stack</span><span>2024</span>
+            </div>
+            <h3>MusicMap <span aria-hidden="true">↗</span></h3>
+            <p>
+              A web app for sharing songs and stories at specific locations.
+            </p></a
+          >
+          <a class="project-card" href="./work.html#itara"
+            ><div class="project-art project-screenshot">
+              <img
+                src="./assets/projects/itara-current.webp"
+                width="1270"
+                height="714"
+                alt="Current Itara Studio homepage, featuring the artisan team"
+                loading="lazy"
+              /><span class="art-bottom">Current Itara site · 2026</span>
+            </div>
+            <div class="card-meta">
+              <span>03 / Product · E-commerce</span><span>2018–23</span>
+            </div>
+            <h3>Itara <span aria-hidden="true">↗</span></h3>
+            <p>
+              A Shopify storefront for a nonprofit selling Rwandan artisan
+              products.
+            </p></a
+          >
+        </div>
+      </section>
+
+      <section class="photography-home" aria-labelledby="photo-heading">
+        <div class="home-section-head">
+          <div>
+            <p class="eyebrow">Photography</p>
+            <h2 id="photo-heading">Selected photographs.</h2>
+          </div>
+          <div>
+            <p class="section-description">
+              A few photos from 2024–2026. The full archive includes 34
+              photographs.
+            </p>
+            <a class="text-link" href="./archive.html"
+              >View all 34 photographs <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+        <div class="photo-preview">
+          <a href="./archive.html#frame-15"
+            ><figure>
+              <img
+                srcset="
+                  ./assets/photos/small/frame-15.webp  640w,
+                  ./assets/photos/frame-15.webp       1800w
+                "
+                sizes="(max-width: 700px) 90vw, 33vw"
+                src="./assets/photos/frame-15.webp"
+                width="1800"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+                alt="A red-sailed boat crossing Hong Kong harbour"
+              />
+              <figcaption>
+                <span>Hong Kong harbour</span><span>2025</span>
+              </figcaption>
+            </figure></a
+          ><a href="./archive.html#frame-21"
+            ><figure>
+              <img
+                srcset="
+                  ./assets/photos/small/frame-21.webp  640w,
+                  ./assets/photos/frame-21.webp       1200w
+                "
+                sizes="(max-width: 700px) 90vw, 33vw"
+                src="./assets/photos/frame-21.webp"
+                width="1200"
+                height="1800"
+                loading="lazy"
+                decoding="async"
+                alt="A spaniel framed by white calla lilies"
+              />
+              <figcaption>
+                <span>Spaniel and calla lilies</span><span>2026</span>
+              </figcaption>
+            </figure></a
+          ><a href="./archive.html#frame-09"
+            ><figure>
+              <img
+                srcset="
+                  ./assets/photos/small/frame-09.webp  640w,
+                  ./assets/photos/frame-09.webp       1800w
+                "
+                sizes="(max-width: 700px) 90vw, 33vw"
+                src="./assets/photos/frame-09.webp"
+                width="1800"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+                alt="Long-exposure figures standing along a moonlit shoreline"
+              />
+              <figcaption>
+                <span>Moonlit shoreline</span><span>2024</span>
+              </figcaption>
+            </figure></a
+          >
+        </div>
+      </section>
+      <section class="home-section personal-note">
+        <p class="eyebrow">About</p>
+        <div>
+          <h2>A bit about me.</h2>
+          <p>
+            I studied computer science at Pomona College, where I played varsity
+            golf and took a black-and-white film photography class. I now live
+            and work in Silicon Valley.
+          </p>
+          <a class="text-link" href="./about.html"
+            >More about me <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="home-section shelf-preview">
+        <div>
+          <p class="eyebrow">Music &amp; more</p>
+          <h2>Recommendations.</h2>
+          <p>Music and camera recommendations.</p>
+          <a class="text-link" href="./recommendations.html"
+            >Browse favorites ↗</a
+          >
+        </div>
+        <a class="record-preview" href="./recommendations.html"
+          ><div class="record-disc" aria-hidden="true"><span>dw</span></div>
+          <div>
+            <span class="mono">01 / Music</span>
+            <h3>wave to earth</h3>
+            <p>The inspiration for this site’s visual direction.</p>
+          </div></a
+        >
+      </section>
+      <section class="home-section notes-preview">
+        <p class="eyebrow">From the notebook</p>
+        <a href="./notes.html#learning-on-film"
+          ><h2>
+            Learning photography on film <span aria-hidden="true">↗</span>
+          </h2>
+          <p>
+            Starting with pinhole cameras, medium format, and the darkroom at
+            Pomona.
+          </p></a
+        >
       </section>
     </main>
 
-    <!-- SHARED FOOTER (keep in sync: index.html, work.html, archive.html, about.html) -->
+    <!-- SHARED FOOTER -->
     <footer class="site-footer" id="contact">
-      <div class="footer-col">
-        <p>David Wong</p>
-        <p>Silicon Valley · <span data-year></span></p>
+      <div class="footer-top">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Get in touch.</h2>
+        </div>
+        <div class="footer-contact">
+          <a class="contact-link" href="mailto:davidmwong2021@gmail.com"
+            >Email me <span aria-hidden="true">↗</span></a
+          >
+          <p>You can also find me on LinkedIn, GitHub, and Instagram.</p>
+        </div>
       </div>
-      <div class="footer-col">
-        <a href="mailto:davidmwong2021@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/davidwongg/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        <a href="https://github.com/dmwong25" target="_blank" rel="noreferrer">GitHub ↗</a>
-      </div>
-      <div class="footer-col">
-        <p class="footer-status">Currently: PwC · DAT Tech &amp; Data</p>
+      <div class="footer-bottom">
+        <a class="wordmark" href="./index.html"
+          >David Wong<span class="brand-dot">.</span></a
+        >
+        <p>Silicon Valley, CA · <span data-year>2026</span></p>
+        <nav aria-label="Social links">
+          <a
+            href="https://www.linkedin.com/in/davidwongg/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn ↗</a
+          ><a
+            href="https://github.com/dmwong25"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub ↗</a
+          ><a href="https://www.instagram.com/davidwong.25/" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://www.instagram.com/dwong.pics/" target="_blank" rel="noreferrer">Photography Instagram ↗</a>
+        </nav>
+        <a href="#main">Back to top ↑</a>
       </div>
     </footer>
     <!-- END SHARED FOOTER -->

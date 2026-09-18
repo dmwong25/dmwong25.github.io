@@ -1,0 +1,96 @@
+[
+  {
+    "id": "5069JTmv5ZDyPeZaCCXiCg",
+    "category": "Artists",
+    "title": "wave to earth",
+    "detail": "Artist",
+    "url": "https://open.spotify.com/artist/5069JTmv5ZDyPeZaCCXiCg?utm_source=openai&utm_medium=chatgpt",
+    "linkLabel": "Listen",
+    "cover": "https://i.scdn.co/image/ab6761610000e5eb11fa75d331351ecfc2e93faf"
+  },
+  {
+    "id": "20wkVLutqVOYrc0kxFs7rA",
+    "category": "Artists",
+    "title": "Daniel Caesar",
+    "detail": "Artist",
+    "url": "https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA?utm_source=openai&utm_medium=chatgpt",
+    "linkLabel": "Listen",
+    "cover": "https://i.scdn.co/image/ab6761610000e5ebe4d94f7cbebb17504c25d419"
+  },
+  {
+    "id": "5INjqkS1o8h1imAzPqGZBb",
+    "category": "Artists",
+    "title": "Tame Impala",
+    "detail": "Artist",
+    "url": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb?utm_source=openai&utm_medium=chatgpt",
+    "linkLabel": "Listen",
+    "cover": "https://i.scdn.co/image/ab6761610000e5ebe412a782245eb20d9626c601"
+  },
+  {
+    "id": "7gW0r5CkdEUMm42w9XpyZO",
+    "category": "Artists",
+    "title": "Laufey",
+    "detail": "Artist",
+    "url": "https://open.spotify.com/artist/7gW0r5CkdEUMm42w9XpyZO?utm_source=openai&utm_medium=chatgpt",
+    "linkLabel": "Listen",
+    "cover": "https://i.scdn.co/image/ab6761610000e5ebc751deb23ed62e7cadfb669a"
+  },
+  {
+    "id": "4Vgo0GZymPNbC6reJGXqwI",
+    "category": "Songs",
+    "title": "heaven and hell",
+    "detail": "wave to earth",
+    "url": "https://open.spotify.com/track/4Vgo0GZymPNbC6reJGXqwI?utm_source=openai&utm_medium=chatgpt",
+    "linkLabel": "Listen",
+    "cover": "https://i.scdn.co/image/ab67616d0000b2739a03ff40f308fea55054aa68"
+  },
+  {
+    "id": "2tBaswRea2Mw9eUrDdVtAD",
+    "category": "Songs",
+    "title": "cherry flavoured love inside your heart",
+    "detail": "wave to earth",
+    "url": "https://open.spotify.com/track/2tBaswRea2Mw9eUrDdVtAD?utm_source=openai&utm_medium=chatgpt",
+    "linkLabel": "Listen",
+    "cover": "https://i.scdn.co/image/ab67616d0000b2739a03ff40f308fea55054aa68"
+  },
+  {
+    "id": "17XBhgSj3sXbVtyAdc0b7K",
+    "category": "Songs",
+    "title": "closing.",
+    "detail": "wave to earth",
+    "url": "https://open.spotify.com/track/17XBhgSj3sXbVtyAdc0b7K?utm_source=openai&utm_medium=chatgpt",
+    "linkLabel": "Listen",
+    "cover": "https://i.scdn.co/image/ab67616d0000b2739a03ff40f308fea55054aa68"
+  },
+  {
+    "id": "5mtTAScDytxMMqZj14NmlN",
+    "category": "Songs",
+    "title": "love.",
+    "detail": "wave to earth",
+    "url": "https://open.spotify.com/track/5mtTAScDytxMMqZj14NmlN?utm_source=openai&utm_medium=chatgpt",
+    "linkLabel": "Listen",
+    "cover": "https://i.scdn.co/image/ab67616d0000b27324f8c3ad20b7c6cfecb5832e"
+  },
+  {
+    "id": "ricoh-gr-iii-hdf",
+    "category": "Cameras",
+    "title": "Ricoh GR III HDF",
+    "detail": "Compact camera",
+    "note": "A compact camera with a built-in highlight diffusion filter for softer highlights.",
+    "url": "https://news.ricoh-imaging.co.jp/rim_info2/2024/20240328_039762.html",
+    "linkLabel": "View at Ricoh",
+    "art": "camera",
+    "cover": "https://news.ricoh-imaging.co.jp/rim_info/RICOH_GR_III_HDF.jpg"
+  },
+  {
+    "id": "sony-alpha-6700",
+    "category": "Cameras",
+    "title": "Sony Alpha 6700",
+    "detail": "Mirrorless camera",
+    "note": "An APS-C camera for photos and video, with interchangeable Sony E-mount lenses.",
+    "url": "https://electronics.sony.com/imaging/interchangeable-lens-cameras/aps-c/p/ilce6700-b",
+    "linkLabel": "View at Sony",
+    "art": "camera",
+    "cover": "https://d1ncau8tqf99kp.cloudfront.net/converted/115446_original_local_1200x1050_v3_converted.webp"
+  }
+]

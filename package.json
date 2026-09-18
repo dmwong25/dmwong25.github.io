@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node server.mjs"
+    "start": "node server.mjs",
+    "check": "node --check site.js && node scripts/check.mjs",
+    "build:recommendations": "node scripts/build-recommendations.mjs"
   }
 }

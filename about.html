@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="About David Wong, data analyst at PwC, Pomona College computer science graduate, and photographer based in Silicon Valley."
+      content="Meet David Wong: data analyst at PwC, Pomona College computer science graduate, photographer, and golfer based in Silicon Valley."
     />
-    <meta name="theme-color" content="#201d1a" />
+    <meta name="theme-color" content="#e9edf0" />
     <title>About · David Wong</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,27 +18,60 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./site.js" defer></script>
+    <link rel="canonical" href="https://dmwong25.github.io/about.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="David Wong" />
+    <meta property="og:title" content="About · David Wong" />
+    <meta
+      property="og:description"
+      content="Meet David Wong: data analyst at PwC, Pomona College computer science graduate, photographer, and golfer based in Silicon Valley."
+    />
+    <meta property="og:url" content="https://dmwong25.github.io/about.html" />
+    <meta
+      property="og:image"
+      content="https://dmwong25.github.io/assets/photos/frame-16.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="A mountain valley photographed by David Wong"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="./theme.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- SHARED HEADER (keep in sync: index.html, work.html, archive.html, about.html) -->
+    <!-- SHARED HEADER -->
     <header class="site-nav" data-nav>
-      <a class="wordmark" href="./index.html">david wong</a>
-      <ul>
-        <li><a href="./work.html">work</a></li>
-        <li><a href="./archive.html">archive</a></li>
-        <li><a href="./about.html" aria-current="page">about</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
+      <a class="wordmark" href="./index.html"
+        >David Wong<span class="brand-dot">.</span></a
+      >
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./work.html">Work</a></li>
+          <li><a href="./archive.html">Photos</a></li>
+          <li><a href="./about.html" aria-current="page">About</a></li>
+          <li><a href="./notes.html">Notes</a></li>
+          <li><a href="./recommendations.html">Favorites</a></li>
+        </ul>
+      </nav>
+      <a class="nav-contact" href="#contact"
+        >Contact <span aria-hidden="true">↗</span></a
+      >
     </header>
     <!-- END SHARED HEADER -->
 
-    <main id="main">
+    <main id="main" tabindex="-1">
       <div class="about-intro">
-        <figure class="about-portrait reveal">
+        <figure class="about-portrait">
           <div class="frame">
             <img
+              srcset="
+                ./assets/photos/small/frame-23.webp  640w,
+                ./assets/photos/frame-23.webp       1800w
+              "
+              sizes="(max-width: 700px) 90vw, 38vw"
               src="./assets/photos/frame-23.webp"
               width="1800"
               height="1200"
@@ -50,29 +83,35 @@
         </figure>
 
         <div class="about-copy">
-          <p class="eyebrow reveal">About</p>
-          <h1 class="reveal">Data, automation, and a few thousand photographs.</h1>
-          <p class="about-bio reveal">
-            I studied computer science at Pomona College, and now work in PwC's
-            DAT Tech &amp; Data practice, building automation and revenue tooling
-            around large, messy datasets. Most days that means designing
-            recognition and recast models across Order-to-Earnings, teaching
-            agents to catch exceptions before people have to, and rebuilding
-            old Alteryx pipelines as Python workflows that are easier to
-            maintain. Photography is the other half of how I pay attention to
-            the world around me. It's less about the finished picture and more
-            about the habit of noticing the small moments that matter.
+          <p class="eyebrow">About</p>
+          <h1>About <em>me.</em></h1>
+          <p class="about-bio">
+            I’m David. I live in Silicon Valley and work as a data analyst at
+            PwC. I graduated from Pomona College in 2025 with a degree in
+            computer science and a minor in mathematics.
           </p>
-          <a class="text-link reveal" href="https://www.linkedin.com/in/davidwongg/" target="_blank" rel="noreferrer">Resume, via LinkedIn ↗</a>
+          <p class="about-bio">
+            Outside of work, I take photos and play golf. I played on Pomona’s
+            varsity golf team and started learning photography in a
+            black-and-white film class. I now shoot with a Ricoh GR III HDF and
+            a Sony Alpha 6700.
+          </p>
+          <a
+            class="text-link"
+            href="https://www.linkedin.com/in/davidwongg/"
+            target="_blank"
+            rel="noreferrer"
+            >My professional background ↗</a
+          >
 
-          <dl class="about-meta reveal">
+          <dl class="about-meta">
             <div>
               <dt>Location</dt>
               <dd>Silicon Valley, CA</dd>
             </div>
             <div>
               <dt>Role</dt>
-              <dd>Data Analyst, PwC</dd>
+              <dd>Data analyst, PwC</dd>
             </div>
             <div>
               <dt>Interests</dt>
@@ -86,12 +125,15 @@
         </div>
       </div>
 
-      <div class="timeline">
-        <article class="timeline-row reveal">
+      <section class="timeline" aria-labelledby="background-heading">
+        <h2 class="timeline-heading" id="background-heading">
+          Experience &amp; education.
+        </h2>
+        <article class="timeline-row">
           <p class="timeline-year">2025—Present</p>
           <div>
             <p class="timeline-type">Professional experience</p>
-            <h3>Data Analyst · PwC</h3>
+            <h3>Data analyst · PwC</h3>
             <p class="timeline-description">
               I design and build revenue-recognition and recast models across
               end-to-end Order-to-Earnings processes, working through millions
@@ -101,27 +143,29 @@
               for process analysis, and rebuild legacy Alteryx transformations
               as maintainable Python.
             </p>
-            <span class="timeline-meta">DAT Tech &amp; Data · Revenue Automation · Silicon Valley</span>
+            <span class="timeline-meta"
+              >DAT Tech &amp; Data · Revenue Automation · Silicon Valley</span
+            >
           </div>
         </article>
 
-        <article class="timeline-row reveal">
+        <article class="timeline-row">
           <p class="timeline-year">2018—2023</p>
           <div>
             <p class="timeline-type">Professional experience</p>
-            <h3>Products &amp; Technology Manager · Itara</h3>
+            <h3>Products &amp; technology manager · Itara</h3>
             <p class="timeline-description">
-              I built the organization's e-commerce presence from the ground
-              up, helping turn a mission-driven retail operation into a
-              working digital channel. That meant integrating Shopify, writing
-              the storefront by hand in HTML, CSS, and JavaScript, and keeping
-              the sales and inventory systems running day to day.
+              I built and maintained the organization’s online store,
+              integrating Shopify with a storefront written in HTML, CSS, and
+              JavaScript. I also maintained the sales and inventory systems.
             </p>
-            <span class="timeline-meta">Nonprofit e-commerce · Shopify · Web development</span>
+            <span class="timeline-meta"
+              >Nonprofit e-commerce · Shopify · Web development</span
+            >
           </div>
         </article>
 
-        <article class="timeline-row reveal">
+        <article class="timeline-row">
           <p class="timeline-year">2021—2025</p>
           <div>
             <p class="timeline-type">Education</p>
@@ -132,54 +176,77 @@
               software engineering and AI tools to projects built for other
               students.
             </p>
-            <span class="timeline-meta">Major GPA: 3.83 · Cumulative GPA: 3.737 · Varsity golf</span>
+            <span class="timeline-meta"
+              >Major GPA: 3.83 · Cumulative GPA: 3.737 · Varsity golf</span
+            >
           </div>
         </article>
 
-        <article class="timeline-row reveal">
+        <article class="timeline-row">
           <p class="timeline-year">2021</p>
           <div>
             <p class="timeline-type">Community service</p>
-            <h3>Mathematics Tutor · Garden Learning Center</h3>
+            <h3>Mathematics tutor · Garden Learning Center</h3>
             <p class="timeline-description">
-              Tutored math for elementary and middle-school students from the
-              local community, breaking down foundational concepts, working
-              through practice problems together, and sticking with it long
-              enough for their confidence to catch up to their ability.
+              I tutored elementary and middle-school students in mathematics,
+              explaining concepts and working through practice problems with
+              them.
             </p>
-            <span class="timeline-meta">Elementary &amp; middle school mathematics · July—August 2021</span>
+            <span class="timeline-meta"
+              >Elementary &amp; middle school mathematics · July—August
+              2021</span
+            >
           </div>
         </article>
 
-        <article class="timeline-row reveal">
+        <article class="timeline-row">
           <p class="timeline-year">2025</p>
           <div>
             <p class="timeline-type">Credential</p>
             <h3>Zuora Revenue 101</h3>
             <p class="timeline-description">
-              Completed Zuora University's foundational revenue training:
-              useful, practical grounding that connects directly to the
-              automation and analysis work I do now.
+              Completed Zuora University’s introductory revenue training.
             </p>
             <span class="timeline-meta">Issued November 2025</span>
           </div>
         </article>
-      </div>
+      </section>
     </main>
 
-    <!-- SHARED FOOTER (keep in sync: index.html, work.html, archive.html, about.html) -->
+    <!-- SHARED FOOTER -->
     <footer class="site-footer" id="contact">
-      <div class="footer-col">
-        <p>David Wong</p>
-        <p>Silicon Valley · <span data-year></span></p>
+      <div class="footer-top">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Get in touch.</h2>
+        </div>
+        <div class="footer-contact">
+          <a class="contact-link" href="mailto:davidmwong2021@gmail.com"
+            >Email me <span aria-hidden="true">↗</span></a
+          >
+          <p>You can also find me on LinkedIn, GitHub, and Instagram.</p>
+        </div>
       </div>
-      <div class="footer-col">
-        <a href="mailto:davidmwong2021@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/davidwongg/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-        <a href="https://github.com/dmwong25" target="_blank" rel="noreferrer">GitHub ↗</a>
-      </div>
-      <div class="footer-col">
-        <p class="footer-status">Currently: PwC · DAT Tech &amp; Data</p>
+      <div class="footer-bottom">
+        <a class="wordmark" href="./index.html"
+          >David Wong<span class="brand-dot">.</span></a
+        >
+        <p>Silicon Valley, CA · <span data-year>2026</span></p>
+        <nav aria-label="Social links">
+          <a
+            href="https://www.linkedin.com/in/davidwongg/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn ↗</a
+          ><a
+            href="https://github.com/dmwong25"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub ↗</a
+          ><a href="https://www.instagram.com/davidwong.25/" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://www.instagram.com/dwong.pics/" target="_blank" rel="noreferrer">Photography Instagram ↗</a>
+        </nav>
+        <a href="#main">Back to top ↑</a>
       </div>
     </footer>
     <!-- END SHARED FOOTER -->
