@@ -269,6 +269,18 @@ em {
 .current-points li {
   font-size: 15px;
 }
+.current-points h3 {
+  font: 26px var(--font-serif);
+  margin-bottom: 10px;
+}
+.current-points p {
+  max-width: 760px;
+  color: var(--ink-soft);
+  line-height: 1.8;
+}
+#pwc {
+  scroll-margin-top: 110px;
+}
 .index-list {
   padding-bottom: 30px;
 }
@@ -1109,4 +1121,6 @@ em {
 [data-category="songs"] .recommendation-art {
   min-height: 150px;
 }
-[data-category="artists"] .recommendation-art { min-height:0; }
+[data-category="artists"] .recommendation-art {
+  min-height: 0;
+}
