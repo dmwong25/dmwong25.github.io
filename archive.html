@@ -103,9 +103,25 @@
             <option value="everyday">Everyday</option>
           </select></label
         >
+        <button
+          class="saved-filter"
+          type="button"
+          data-saved-filter
+          aria-pressed="false"
+        >
+          Saved photos <span data-saved-count>0</span>
+        </button>
         <p class="mono" data-gallery-count role="status">34 photographs</p>
+        <p class="gallery-save-note" data-save-note>
+          Save photos with the heart button. Your picks stay in this browser.
+        </p>
       </div>
       <div class="photo-collection" data-gallery>
+        <div class="gallery-empty" data-gallery-empty hidden>
+          <h2>No photos in this selection.</h2>
+          <p>Try another year or collection, or return to the full archive.</p>
+          <button type="button" data-gallery-reset>Show all photographs</button>
+        </div>
         <div class="photo-grid">
           <figure
             id="frame-01"
@@ -1174,8 +1190,18 @@
             target="_blank"
             rel="noreferrer"
             >GitHub ↗</a
-          ><a href="https://www.instagram.com/davidwong.25/" target="_blank" rel="noreferrer">Instagram ↗</a>
-          <a href="https://www.instagram.com/dwong.pics/" target="_blank" rel="noreferrer">Photography Instagram ↗</a>
+          ><a
+            href="https://www.instagram.com/davidwong.25/"
+            target="_blank"
+            rel="noreferrer"
+            >Instagram ↗</a
+          >
+          <a
+            href="https://www.instagram.com/dwong.pics/"
+            target="_blank"
+            rel="noreferrer"
+            >Photography Instagram ↗</a
+          >
         </nav>
         <a href="#main">Back to top ↑</a>
       </div>

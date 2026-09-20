@@ -1124,3 +1124,421 @@ em {
 [data-category="artists"] .recommendation-art {
   min-height: 0;
 }
+/* UI UX Pro Max review: readable labels and comfortable web controls. */
+:root {
+  --focus-ring: #285a83;
+  --control-height: 44px;
+}
+html {
+  scroll-padding-top: 104px;
+}
+:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 4px;
+}
+.site-footer :focus-visible,
+.photo-lightbox :focus-visible {
+  outline-color: #fff;
+}
+.site-nav nav a {
+  min-height: var(--control-height);
+  font-size: 14px;
+}
+.nav-contact {
+  min-height: var(--control-height);
+}
+.eyebrow,
+.photo-item figcaption,
+.recommendation-art > .mono,
+.subject-filter,
+.gallery-toolbar > p,
+.timeline-meta,
+.index-year,
+.index-discipline {
+  font-size: 12px;
+}
+.photo-item figcaption {
+  flex-wrap: wrap;
+  row-gap: 4px;
+}
+.text-link {
+  min-height: var(--control-height);
+  display: inline-flex;
+  align-items: center;
+}
+.gallery-filters button,
+.subject-filter select,
+.lightbox-bar button,
+.lightbox-controls button {
+  min-height: var(--control-height);
+  min-width: var(--control-height);
+}
+.gallery-filters button,
+.subject-filter select {
+  font-size: 14px;
+}
+.footer-bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+.footer-bottom nav a {
+  min-height: var(--control-height);
+  display: inline-flex;
+  align-items: center;
+}
+.gallery-empty {
+  padding: 40px 24px;
+  text-align: center;
+  background: #f6f4eb;
+  border: 1px solid var(--line);
+}
+.gallery-empty h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+.gallery-empty p {
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+.gallery-empty button {
+  min-height: var(--control-height);
+  background: var(--ink);
+  color: var(--paper);
+  border: 0;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+.gallery-empty button:hover {
+  background: var(--accent);
+}
+@media (max-width: 700px) {
+  .site-nav {
+    position: relative;
+  }
+  .site-nav ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px 12px;
+  }
+  .site-nav nav a {
+    font-size: 14px;
+    justify-content: center;
+  }
+  .site-nav nav a[aria-current="page"] {
+    background: var(--accent-blue-soft);
+    border-radius: 3px;
+  }
+  .site-nav nav a[aria-current="page"]::after {
+    display: none;
+  }
+  .site-nav .wordmark {
+    font-size: 28px;
+  }
+  html {
+    scroll-padding-top: 16px;
+  }
+  .photo-item figcaption {
+    font-size: 12px;
+  }
+  .subject-filter {
+    font-size: 12px;
+  }
+  .gallery-filters {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .gallery-filters button {
+    padding-inline: 12px;
+  }
+  .collection-nav a {
+    min-height: var(--control-height);
+  }
+}
+@media (max-width: 700px) {
+  .site-nav nav a {
+    width: 100%;
+  }
+}
+/* Visitors keep their photo collection on their own device. */
+.photo-item {
+  position: relative;
+}
+.photo-save {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #f6f4eb;
+  color: var(--ink);
+  cursor: pointer;
+}
+.photo-save svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+.photo-save[aria-pressed="true"] {
+  color: #873d53;
+  background: #f4e0e5;
+  border-color: #b97789;
+}
+.photo-save[aria-pressed="true"] svg {
+  fill: currentColor;
+}
+.photo-save:hover {
+  box-shadow: 0 2px 8px #233e5724;
+}
+.saved-filter {
+  min-height: 44px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-size: 14px;
+  cursor: pointer;
+}
+.saved-filter[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--paper);
+}
+.gallery-save-note {
+  flex-basis: 100%;
+  color: var(--ink-soft);
+  font-size: 13px;
+  margin: 0;
+}
+.gallery-toolbar .gallery-save-note {
+  white-space: normal;
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+/* A quiet, interactive break before the curated recommendations. */
+.song-picker {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 60px);
+  align-items: center;
+  padding: clamp(24px, 4vw, 48px);
+  margin-bottom: 64px;
+  background: #e5e1d6;
+  border: 1px solid #c9c6ba;
+}
+.song-picker[hidden] {
+  display: none;
+}
+.song-picker h2 {
+  font-size: clamp(30px, 3.5vw, 44px);
+  margin: 12px 0;
+}
+.song-picker p {
+  line-height: 1.65;
+}
+.song-pick-button {
+  min-height: 48px;
+  margin-top: 24px;
+  padding: 12px 20px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+  cursor: pointer;
+}
+.song-pick-button:hover {
+  background: #355973;
+}
+.song-pick-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+.song-picker .song-picker-status {
+  font-size: 12px;
+  min-height: 3.3em;
+  margin: 14px 0 0;
+  color: var(--ink-soft);
+}
+.song-result {
+  min-width: 0;
+  min-height: 250px;
+  padding: 28px;
+  display: grid;
+  align-content: center;
+  background: #edf0ef;
+  border: 1px solid var(--line);
+  box-shadow: 7px 7px 0 #d2d6cf;
+}
+.song-result h3 {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.15;
+  overflow-wrap: anywhere;
+}
+.song-result h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+.song-result h3 a:hover {
+  text-decoration: underline;
+}
+.song-artists {
+  margin: 12px 0 20px;
+  overflow-wrap: anywhere;
+}
+.song-artists a {
+  color: var(--ink-soft);
+  text-underline-offset: 4px;
+}
+.song-placeholder {
+  font-size: 52px;
+  line-height: 1.4;
+  color: var(--accent);
+}
+@media (max-width: 700px) {
+  .song-picker {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .song-result {
+    min-height: 190px;
+    padding: 24px;
+  }
+}
+
+/* Favorites: discovery first, followed by compact music and camera shelves. */
+.favorites-page .page-head {
+  padding-bottom: 28px;
+}
+.favorites-page .collection-nav {
+  margin-bottom: 32px;
+}
+.favorites-page .collection-nav a {
+  background: transparent;
+  border-radius: 0;
+  border-width: 0 0 1px;
+  padding: 12px 4px;
+  margin-right: 20px;
+}
+.favorites-page .collection-nav a:hover {
+  background: var(--accent-blue-soft);
+}
+.favorites-page .song-picker {
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  margin-bottom: 56px;
+  scroll-margin-top: 110px;
+}
+.favorites-page .song-result {
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding: 24px;
+  box-shadow: none;
+  min-height: 244px;
+}
+.song-artwork {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: repeating-radial-gradient(circle, #344e63 0 2px, #2c4356 3px 5px);
+  display: grid;
+  place-items: center;
+}
+.song-artwork::before {
+  content: "";
+  width: 26%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #d6cab5;
+}
+.song-artwork img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.song-result-copy {
+  min-width: 0;
+}
+.favorites-page .song-result h3 {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 2.5vw, 32px);
+}
+.favorites-page .song-artists {
+  font-size: 14px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+.favorites-page .recommendation-group {
+  margin-bottom: 56px;
+}
+.favorites-page [data-category="songs"] .recommendation-card {
+  background: transparent;
+  border-width: 0 0 1px;
+  grid-template-columns: 100px minmax(0, 1fr);
+  box-shadow: none;
+}
+.favorites-page [data-category="songs"] .recommendation-art {
+  padding: 12px 12px 12px 0;
+}
+.favorites-page [data-category="songs"] .recommendation-copy {
+  padding: 12px 0 16px 8px;
+}
+.favorites-page [data-category="songs"] h3 {
+  font-size: 24px;
+}
+.favorites-page [data-category="songs"] .recommendation-copy .text-link {
+  padding-top: 4px;
+}
+@media (max-width: 850px) {
+  .favorites-page .song-picker {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .favorites-page .song-result {
+    grid-template-columns: 160px minmax(0, 1fr);
+    min-height: 210px;
+  }
+}
+@media (max-width: 700px) {
+  .favorites-page .collection-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+  }
+  .favorites-page .collection-nav a {
+    margin: 0;
+    font-size: 14px;
+  }
+  .favorites-page .song-result {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .favorites-page .song-artwork {
+    width: 144px;
+  }
+  .favorites-page .song-result h3 {
+    font-size: 28px;
+  }
+  .favorites-page .song-picker {
+    padding: 24px;
+    margin-bottom: 40px;
+    scroll-margin-top: 24px;
+  }
+}

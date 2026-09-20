@@ -13,7 +13,15 @@ const escape = (value) =>
         char
       ],
   );
-const categories = [...new Set(picks.map((pick) => pick.category))];
+const order = ["Songs", "Artists", "Cameras"];
+const categories = [...new Set(picks.map((pick) => pick.category))].sort(
+  (a, b) => order.indexOf(a) - order.indexOf(b),
+);
+const labels = {
+  Songs: "Song favorites",
+  Artists: "Artists I like",
+  Cameras: "Camera recommendations",
+};
 const ids = new Set();
 for (const pick of picks) {
   assert(pick.id && !ids.has(pick.id), "Each recommendation needs a unique ID");
@@ -35,7 +43,7 @@ for (const pick of picks) {
 const output = categories
   .map(
     (category) =>
-      `<section class="recommendation-group" id="${escape(category.toLowerCase())}" data-category="${escape(category.toLowerCase())}" aria-label="${escape(category)}"><div class="collection-heading"><h2>${escape(category)}</h2><span class="mono">${picks.filter((p) => p.category === category).length} ${picks.filter((p) => p.category === category).length === 1 ? "entry" : "entries"}</span></div><div class="recommendation-grid">${picks
+      `<section class="recommendation-group" id="${escape(category.toLowerCase())}" data-category="${escape(category.toLowerCase())}" aria-label="${escape(category)}"><div class="collection-heading"><h2>${escape(labels[category] || category)}</h2><span class="mono">${picks.filter((p) => p.category === category).length} ${picks.filter((p) => p.category === category).length === 1 ? "entry" : "entries"}</span></div><div class="recommendation-grid">${picks
         .filter((pick) => pick.category === category)
         .map(
           (pick, index) =>

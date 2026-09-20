@@ -8,7 +8,7 @@
       content="Music and other recommendations from David Wong."
     />
     <meta name="theme-color" content="#e9edf0" />
-    <title>Recommendations · David Wong</title>
+    <title>Favorites · David Wong</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,13 +18,14 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./site.js" defer></script>
+    <script src="./song-picker.js" type="module"></script>
     <link
       rel="canonical"
       href="https://dmwong25.github.io/recommendations.html"
     />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="David Wong" />
-    <meta property="og:title" content="Recommendations · David Wong" />
+    <meta property="og:title" content="Favorites · David Wong" />
     <meta
       property="og:description"
       content="Music and other recommendations from David Wong."
@@ -44,7 +45,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="./theme.css" />
   </head>
-  <body>
+  <body class="favorites-page">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <!-- SHARED HEADER -->
@@ -73,125 +74,40 @@
     <main id="main" tabindex="-1">
       <div class="page-head">
         <p class="eyebrow">Personal collection / 05</p>
-        <h1>Recommendations<em>.</em></h1>
-        <p class="page-intro">Music and cameras I recommend.</p>
+        <h1>Favorites<em>.</em></h1>
+        <p class="page-intro">A few favorites in music and photography.</p>
       </div>
-      <nav class="collection-nav" aria-label="Browse recommendations">
-        <a href="#artists">Artists <span>04</span></a
-        ><a href="#songs">Songs <span>04</span></a
-        ><a href="#cameras">Cameras <span>02</span></a>
+      <nav class="collection-nav" aria-label="Browse favorites">
+        <a href="#song-picker">Discover a song</a
+        ><a href="#songs">Song favorites</a><a href="#artists">Artists</a
+        ><a href="#cameras">Cameras</a>
       </nav>
       <section class="recommendations-content" aria-label="Recommendations">
-        <!-- PICKS START -->
         <section
-          class="recommendation-group"
-          id="artists"
-          data-category="artists"
-          aria-label="Artists"
+          class="song-picker"
+          id="song-picker"
+          aria-labelledby="picker-heading"
+          hidden
+          data-song-picker
         >
-          <div class="collection-heading">
-            <h2>Artists</h2>
-            <span class="mono">4 entries</span>
+          <div>
+            <p class="eyebrow">Discover a song</p>
+            <h2 id="picker-heading">Let me pick a song.</h2>
+            <p>A random song from my collection, one pick at a time.</p>
+            <button class="song-pick-button" type="button" data-pick-song>
+              Pick a song for me <span aria-hidden="true">↗</span>
+            </button>
+            <p class="song-picker-status" role="status" data-picker-status></p>
           </div>
-          <div class="recommendation-grid">
-            <article class="recommendation-card" id="5069JTmv5ZDyPeZaCCXiCg">
-              <div class="recommendation-art" aria-hidden="true">
-                <span class="mono">01 / Artists</span
-                ><img
-                  class="recommendation-cover"
-                  src="https://i.scdn.co/image/ab6761610000e5eb11fa75d331351ecfc2e93faf"
-                  width="640"
-                  height="640"
-                  alt=""
-                  loading="lazy"
-                />
-              </div>
-              <div class="recommendation-copy">
-                <p class="eyebrow">Artist</p>
-                <h3>wave to earth</h3>
-                <a
-                  class="text-link"
-                  href="https://open.spotify.com/artist/5069JTmv5ZDyPeZaCCXiCg?utm_source=openai&amp;utm_medium=chatgpt"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Listen ↗</a
-                >
-              </div>
-            </article>
-            <article class="recommendation-card" id="20wkVLutqVOYrc0kxFs7rA">
-              <div class="recommendation-art" aria-hidden="true">
-                <span class="mono">02 / Artists</span
-                ><img
-                  class="recommendation-cover"
-                  src="https://i.scdn.co/image/ab6761610000e5ebe4d94f7cbebb17504c25d419"
-                  width="640"
-                  height="640"
-                  alt=""
-                  loading="lazy"
-                />
-              </div>
-              <div class="recommendation-copy">
-                <p class="eyebrow">Artist</p>
-                <h3>Daniel Caesar</h3>
-                <a
-                  class="text-link"
-                  href="https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA?utm_source=openai&amp;utm_medium=chatgpt"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Listen ↗</a
-                >
-              </div>
-            </article>
-            <article class="recommendation-card" id="5INjqkS1o8h1imAzPqGZBb">
-              <div class="recommendation-art" aria-hidden="true">
-                <span class="mono">03 / Artists</span
-                ><img
-                  class="recommendation-cover"
-                  src="https://i.scdn.co/image/ab6761610000e5ebe412a782245eb20d9626c601"
-                  width="640"
-                  height="640"
-                  alt=""
-                  loading="lazy"
-                />
-              </div>
-              <div class="recommendation-copy">
-                <p class="eyebrow">Artist</p>
-                <h3>Tame Impala</h3>
-                <a
-                  class="text-link"
-                  href="https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb?utm_source=openai&amp;utm_medium=chatgpt"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Listen ↗</a
-                >
-              </div>
-            </article>
-            <article class="recommendation-card" id="7gW0r5CkdEUMm42w9XpyZO">
-              <div class="recommendation-art" aria-hidden="true">
-                <span class="mono">04 / Artists</span
-                ><img
-                  class="recommendation-cover"
-                  src="https://i.scdn.co/image/ab6761610000e5ebc751deb23ed62e7cadfb669a"
-                  width="640"
-                  height="640"
-                  alt=""
-                  loading="lazy"
-                />
-              </div>
-              <div class="recommendation-copy">
-                <p class="eyebrow">Artist</p>
-                <h3>Laufey</h3>
-                <a
-                  class="text-link"
-                  href="https://open.spotify.com/artist/7gW0r5CkdEUMm42w9XpyZO?utm_source=openai&amp;utm_medium=chatgpt"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Listen ↗</a
-                >
-              </div>
-            </article>
+          <div class="song-result" data-song-result>
+            <div class="song-artwork" aria-hidden="true"></div>
+            <div class="song-result-copy">
+              <p class="eyebrow">Your next listen</p>
+              <p>Pick a song to see what comes up.</p>
+            </div>
           </div>
         </section>
+        <!-- PICKS START -->
         <section
           class="recommendation-group"
           id="songs"
@@ -199,7 +115,7 @@
           aria-label="Songs"
         >
           <div class="collection-heading">
-            <h2>Songs</h2>
+            <h2>Song favorites</h2>
             <span class="mono">4 entries</span>
           </div>
           <div class="recommendation-grid">
@@ -303,12 +219,121 @@
         </section>
         <section
           class="recommendation-group"
+          id="artists"
+          data-category="artists"
+          aria-label="Artists"
+        >
+          <div class="collection-heading">
+            <h2>Artists I like</h2>
+            <span class="mono">4 entries</span>
+          </div>
+          <div class="recommendation-grid">
+            <article class="recommendation-card" id="5069JTmv5ZDyPeZaCCXiCg">
+              <div class="recommendation-art" aria-hidden="true">
+                <span class="mono">01 / Artists</span
+                ><img
+                  class="recommendation-cover"
+                  src="https://i.scdn.co/image/ab6761610000e5eb11fa75d331351ecfc2e93faf"
+                  width="640"
+                  height="640"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div class="recommendation-copy">
+                <p class="eyebrow">Artist</p>
+                <h3>wave to earth</h3>
+                <a
+                  class="text-link"
+                  href="https://open.spotify.com/artist/5069JTmv5ZDyPeZaCCXiCg?utm_source=openai&amp;utm_medium=chatgpt"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Listen ↗</a
+                >
+              </div>
+            </article>
+            <article class="recommendation-card" id="20wkVLutqVOYrc0kxFs7rA">
+              <div class="recommendation-art" aria-hidden="true">
+                <span class="mono">02 / Artists</span
+                ><img
+                  class="recommendation-cover"
+                  src="https://i.scdn.co/image/ab6761610000e5ebe4d94f7cbebb17504c25d419"
+                  width="640"
+                  height="640"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div class="recommendation-copy">
+                <p class="eyebrow">Artist</p>
+                <h3>Daniel Caesar</h3>
+                <a
+                  class="text-link"
+                  href="https://open.spotify.com/artist/20wkVLutqVOYrc0kxFs7rA?utm_source=openai&amp;utm_medium=chatgpt"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Listen ↗</a
+                >
+              </div>
+            </article>
+            <article class="recommendation-card" id="5INjqkS1o8h1imAzPqGZBb">
+              <div class="recommendation-art" aria-hidden="true">
+                <span class="mono">03 / Artists</span
+                ><img
+                  class="recommendation-cover"
+                  src="https://i.scdn.co/image/ab6761610000e5ebe412a782245eb20d9626c601"
+                  width="640"
+                  height="640"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div class="recommendation-copy">
+                <p class="eyebrow">Artist</p>
+                <h3>Tame Impala</h3>
+                <a
+                  class="text-link"
+                  href="https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb?utm_source=openai&amp;utm_medium=chatgpt"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Listen ↗</a
+                >
+              </div>
+            </article>
+            <article class="recommendation-card" id="7gW0r5CkdEUMm42w9XpyZO">
+              <div class="recommendation-art" aria-hidden="true">
+                <span class="mono">04 / Artists</span
+                ><img
+                  class="recommendation-cover"
+                  src="https://i.scdn.co/image/ab6761610000e5ebc751deb23ed62e7cadfb669a"
+                  width="640"
+                  height="640"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div class="recommendation-copy">
+                <p class="eyebrow">Artist</p>
+                <h3>Laufey</h3>
+                <a
+                  class="text-link"
+                  href="https://open.spotify.com/artist/7gW0r5CkdEUMm42w9XpyZO?utm_source=openai&amp;utm_medium=chatgpt"
+                  target="_blank"
+                  rel="noreferrer"
+                  >Listen ↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </section>
+        <section
+          class="recommendation-group"
           id="cameras"
           data-category="cameras"
           aria-label="Cameras"
         >
           <div class="collection-heading">
-            <h2>Cameras</h2>
+            <h2>Camera recommendations</h2>
             <span class="mono">2 entries</span>
           </div>
           <div class="recommendation-grid">
@@ -404,8 +429,18 @@
             target="_blank"
             rel="noreferrer"
             >GitHub ↗</a
-          ><a href="https://www.instagram.com/davidwong.25/" target="_blank" rel="noreferrer">Instagram ↗</a>
-          <a href="https://www.instagram.com/dwong.pics/" target="_blank" rel="noreferrer">Photography Instagram ↗</a>
+          ><a
+            href="https://www.instagram.com/davidwong.25/"
+            target="_blank"
+            rel="noreferrer"
+            >Instagram ↗</a
+          >
+          <a
+            href="https://www.instagram.com/dwong.pics/"
+            target="_blank"
+            rel="noreferrer"
+            >Photography Instagram ↗</a
+          >
         </nav>
         <a href="#main">Back to top ↑</a>
       </div>
