@@ -20,7 +20,7 @@ const categories = [...new Set(picks.map((pick) => pick.category))].sort(
 const labels = {
   Songs: "Song favorites",
   Artists: "Artists I like",
-  Cameras: "Camera recommendations",
+  Cameras: "What I shoot with",
 };
 const ids = new Set();
 for (const pick of picks) {

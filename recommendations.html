@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Music and other recommendations from David Wong."
+      content="Favorite music and the cameras David Wong uses. Discover a song from his collection."
     />
     <meta name="theme-color" content="#e9edf0" />
     <title>Favorites · David Wong</title>
@@ -28,7 +28,7 @@
     <meta property="og:title" content="Favorites · David Wong" />
     <meta
       property="og:description"
-      content="Music and other recommendations from David Wong."
+      content="Favorite music and the cameras David Wong uses. Discover a song from his collection."
     />
     <meta
       property="og:url"
@@ -36,11 +36,11 @@
     />
     <meta
       property="og:image"
-      content="https://dmwong25.github.io/assets/photos/frame-16.webp"
+      content="https://dmwong25.github.io/assets/photos/frame-49.webp"
     />
     <meta
       property="og:image:alt"
-      content="A mountain valley photographed by David Wong"
+      content="Confetti above the stage and audience at a wave to earth concert"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="stylesheet" href="./theme.css" />
@@ -75,14 +75,14 @@
       <div class="page-head">
         <p class="eyebrow">Personal collection / 05</p>
         <h1>Favorites<em>.</em></h1>
-        <p class="page-intro">A few favorites in music and photography.</p>
+        <p class="page-intro">Music I like and the cameras I use.</p>
       </div>
       <nav class="collection-nav" aria-label="Browse favorites">
-        <a href="#song-picker">Discover a song</a
+        <a href="#song-picker" data-picker-nav hidden>Discover a song</a
         ><a href="#songs">Song favorites</a><a href="#artists">Artists</a
         ><a href="#cameras">Cameras</a>
       </nav>
-      <section class="recommendations-content" aria-label="Recommendations">
+      <section class="recommendations-content" aria-label="Favorites">
         <section
           class="song-picker"
           id="song-picker"
@@ -105,6 +105,17 @@
               <p class="eyebrow">Your next listen</p>
               <p>Pick a song to see what comes up.</p>
             </div>
+          </div>
+        </section>
+        <section class="music-photo" aria-labelledby="music-photo-heading">
+          <a class="music-photo-image" href="./archive.html#frame-49">
+            <img src="./assets/photos/frame-49.webp" srcset="./assets/photos/small/frame-49.webp 640w, ./assets/photos/frame-49.webp 1280w" sizes="(max-width: 700px) 90vw, 55vw" width="1280" height="853" loading="lazy" decoding="async" alt="Confetti above the stage and audience at a wave to earth concert" />
+          </a>
+          <div class="music-photo-copy">
+            <p class="eyebrow">From my photo archive</p>
+            <h2 id="music-photo-heading">wave to earth</h2>
+            <p class="mono">September 2026</p>
+            <a class="text-link" href="./archive.html#frame-49">View the photograph ↗</a>
           </div>
         </section>
         <!-- PICKS START -->
@@ -333,7 +344,7 @@
           aria-label="Cameras"
         >
           <div class="collection-heading">
-            <h2>Camera recommendations</h2>
+            <h2>What I shoot with</h2>
             <span class="mono">2 entries</span>
           </div>
           <div class="recommendation-grid">
@@ -410,6 +421,16 @@
           <a class="contact-link" href="mailto:davidmwong2021@gmail.com"
             >Email me <span aria-hidden="true">↗</span></a
           >
+          <div class="contact-copy">
+            <span>davidmwong2021@gmail.com</span
+            ><button type="button" data-copy-email hidden>Copy email</button>
+          </div>
+          <p
+            class="contact-copy-status"
+            role="status"
+            aria-atomic="true"
+            data-copy-email-status
+          ></p>
           <p>You can also find me on LinkedIn, GitHub, and Instagram.</p>
         </div>
       </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A photographic journal by David Wong. Landscapes, city life, and small moments, photographed from 2024 to 2026."
+      content="A photographic journal by David Wong. Landscapes, city life, and small moments, photographed from 2023 to 2026."
     />
     <meta name="theme-color" content="#e9edf0" />
     <title>Photography · David Wong</title>
@@ -24,7 +24,7 @@
     <meta property="og:title" content="Photography · David Wong" />
     <meta
       property="og:description"
-      content="A photographic journal by David Wong. Landscapes, city life, and small moments, photographed from 2024 to 2026."
+      content="A photographic journal by David Wong. Landscapes, city life, and small moments, photographed from 2023 to 2026."
     />
     <meta property="og:url" content="https://dmwong25.github.io/archive.html" />
     <meta
@@ -64,10 +64,10 @@
 
     <main id="main" tabindex="-1">
       <div class="page-head photo-page-head">
-        <p class="eyebrow">Photography / 2024–2026</p>
+        <p class="eyebrow">Photography / 2023–2026</p>
         <h1><em>Photographs.</em></h1>
         <p class="page-intro">
-          Photos from trips and everyday life, taken between 2024 and 2026.
+          Photos from trips and everyday life, taken between 2023 and 2026.
           Select a photo to see it in full.
         </p>
         <a
@@ -79,6 +79,15 @@
         >
       </div>
       <div class="gallery-toolbar" data-gallery-toolbar hidden>
+        <label class="photo-search">
+          Find a photograph
+          <input
+            type="search"
+            data-photo-search
+            placeholder="Try mountains, harbour, or 2025"
+            autocomplete="off"
+          />
+        </label>
         <div
           class="gallery-filters"
           role="group"
@@ -93,11 +102,13 @@
           ><button type="button" data-filter="2024" aria-pressed="false">
             2024
           </button>
+          <button type="button" data-filter="2023" aria-pressed="false">2023</button>
         </div>
         <label class="subject-filter"
           >Collection
           <select data-subject-filter>
             <option value="all">All photographs</option>
+            <option value="selected">Selected photographs</option>
             <option value="landscapes">Landscapes</option>
             <option value="city">City &amp; travel</option>
             <option value="everyday">Everyday</option>
@@ -111,7 +122,7 @@
         >
           Saved photos <span data-saved-count>0</span>
         </button>
-        <p class="mono" data-gallery-count role="status">34 photographs</p>
+        <p class="mono" data-gallery-count role="status">61 photographs</p>
         <p class="gallery-save-note" data-save-note>
           Save photos with the heart button. Your picks stay in this browser.
         </p>
@@ -119,21 +130,199 @@
       <div class="photo-collection" data-gallery>
         <div class="gallery-empty" data-gallery-empty hidden>
           <h2>No photos in this selection.</h2>
-          <p>Try another year or collection, or return to the full archive.</p>
+          <p>
+            Try another search, year, or collection, or return to the full
+            archive.
+          </p>
           <button type="button" data-gallery-reset>Show all photographs</button>
         </div>
         <div class="photo-grid">
+          <figure id="frame-53" data-photo-selected data-photo-subject="city" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-53.webp">
+              <img srcset="./assets/photos/small/frame-53.webp 640w, ./assets/photos/frame-53.webp 1200w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-53.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="Bright billboards reflected in a narrow pavement puddle at night" />
+            </a>
+            <figcaption><span>Frame 01</span><time datetime="2026-06">June 2026</time></figcaption>
+          </figure>
+          <figure id="frame-54" data-photo-subject="city" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-54.webp">
+              <img srcset="./assets/photos/small/frame-54.webp 640w, ./assets/photos/frame-54.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-54.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A red ladder-shaped structure standing beside blue ocean water" />
+            </a>
+            <figcaption><span>Frame 02</span><time datetime="2026-06">June 2026</time></figcaption>
+          </figure>
+          <figure id="frame-55" data-photo-subject="landscapes" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-55.webp">
+              <img srcset="./assets/photos/small/frame-55.webp 640w, ./assets/photos/frame-55.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-55.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A wet stone path curving through a dense bamboo grove" />
+            </a>
+            <figcaption><span>Frame 03</span><time datetime="2026-07">July 2026</time></figcaption>
+          </figure>
+          <figure id="frame-56" data-photo-subject="everyday" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-56.webp">
+              <img srcset="./assets/photos/small/frame-56.webp 640w, ./assets/photos/frame-56.webp 1200w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-56.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="A person sitting on a broad rock arch against a deep blue sky" />
+            </a>
+            <figcaption><span>Frame 04</span><time datetime="2025-03">March 2025</time></figcaption>
+          </figure>
+          <figure id="frame-57" data-photo-subject="everyday" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-57.webp">
+              <img srcset="./assets/photos/small/frame-57.webp 640w, ./assets/photos/frame-57.webp 1200w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-57.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="A rusted vehicle surrounded by slender trees and green undergrowth" />
+            </a>
+            <figcaption><span>Frame 05</span><time datetime="2025-05">May 2025</time></figcaption>
+          </figure>
+          <figure id="frame-58" data-photo-selected data-photo-subject="everyday" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-58.webp">
+              <img srcset="./assets/photos/small/frame-58.webp 640w, ./assets/photos/frame-58.webp 1200w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-58.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="A photographer reflected among glowing glass spheres" />
+            </a>
+            <figcaption><span>Frame 06</span><time datetime="2025-06">June 2025</time></figcaption>
+          </figure>
+          <figure id="frame-59" data-photo-subject="city" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-59.webp">
+              <img srcset="./assets/photos/small/frame-59.webp 640w, ./assets/photos/frame-59.webp 1200w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-59.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="A curved pink building rising against a pale blue sky" />
+            </a>
+            <figcaption><span>Frame 07</span><time datetime="2025-06">June 2025</time></figcaption>
+          </figure>
+          <figure id="frame-60" data-photo-subject="everyday" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-60.webp">
+              <img srcset="./assets/photos/small/frame-60.webp 640w, ./assets/photos/frame-60.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-60.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A baseball stadium beneath pink twilight clouds" />
+            </a>
+            <figcaption><span>Frame 08</span><time datetime="2026-03">March 2026</time></figcaption>
+          </figure>
+          <figure id="frame-61" data-photo-subject="city" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-61.webp">
+              <img srcset="./assets/photos/small/frame-61.webp 640w, ./assets/photos/frame-61.webp 1200w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-61.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="A lit skyscraper disappearing into fog behind bare branches" />
+            </a>
+            <figcaption><span>Frame 09</span><time datetime="2025-11">November 2025</time></figcaption>
+          </figure>
+          <figure id="frame-62" data-photo-subject="city" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-62.webp">
+              <img srcset="./assets/photos/small/frame-62.webp 640w, ./assets/photos/frame-62.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-62.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="Amber arches and rows of seats facing a closed theater curtain" />
+            </a>
+            <figcaption><span>Frame 10</span><time datetime="2025-11">November 2025</time></figcaption>
+          </figure>
+          <figure id="frame-63" data-photo-selected data-photo-subject="everyday" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-63.webp">
+              <img srcset="./assets/photos/small/frame-63.webp 640w, ./assets/photos/frame-63.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-63.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="Green and blue chairlift seats suspended against a clear blue sky" />
+            </a>
+            <figcaption><span>Frame 11</span><time datetime="2026-08">August 2026</time></figcaption>
+          </figure>
+          <figure id="frame-64" data-photo-selected data-photo-subject="city" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-64.webp">
+              <img srcset="./assets/photos/small/frame-64.webp 640w, ./assets/photos/frame-64.webp 1224w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-64.webp" width="1224" height="1800" loading="lazy" decoding="async" alt="A glowing orange downward arrow beside a dark tree against blue sky" />
+            </a>
+            <figcaption><span>Frame 12</span><time datetime="2026-07">July 2026</time></figcaption>
+          </figure>
+          <figure id="frame-65" data-photo-subject="landscapes" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-65.webp">
+              <img srcset="./assets/photos/small/frame-65.webp 640w, ./assets/photos/frame-65.webp 1200w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-65.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="Mountain peaks and stone ruins framed by a dark stone window" />
+            </a>
+            <figcaption><span>Frame 13</span><time datetime="2026-07">July 2026</time></figcaption>
+          </figure>
+          <figure id="frame-66" data-photo-selected data-photo-subject="landscapes" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-66.webp">
+              <img srcset="./assets/photos/small/frame-66.webp 640w, ./assets/photos/frame-66.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-66.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A turquoise lifeguard tower on an empty beach beside breaking waves" />
+            </a>
+            <figcaption><span>Frame 14</span><time datetime="2026-06">June 2026</time></figcaption>
+          </figure>
+          <figure id="frame-67" data-photo-selected data-photo-subject="city" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-67.webp">
+              <img srcset="./assets/photos/small/frame-67.webp 640w, ./assets/photos/frame-67.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-67.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="Turquoise stained-glass lamps above a warmly lit bar and bartender" />
+            </a>
+            <figcaption><span>Frame 15</span><time datetime="2025-06">June 2025</time></figcaption>
+          </figure>
+          <figure id="frame-68" data-photo-subject="city" data-photo-year="2023" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-68.webp">
+              <img srcset="./assets/photos/small/frame-68.webp 640w, ./assets/photos/frame-68.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-68.webp" width="1800" height="1350" loading="lazy" decoding="async" alt="Temple roof dragons and a decorative tower above a hazy coast" />
+            </a>
+            <figcaption><span>Frame 16</span><time datetime="2023-12">December 2023</time></figcaption>
+          </figure>
+          <figure id="frame-69" data-photo-subject="city" data-photo-year="2023" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-69.webp">
+              <img srcset="./assets/photos/small/frame-69.webp 640w, ./assets/photos/frame-69.webp 1350w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-69.webp" width="1350" height="1800" loading="lazy" decoding="async" alt="Rows of red lanterns hanging above a night market" />
+            </a>
+            <figcaption><span>Frame 17</span><time datetime="2023-12">December 2023</time></figcaption>
+          </figure>
+          <figure id="frame-70" data-photo-subject="city" data-photo-year="2023" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-70.webp">
+              <img srcset="./assets/photos/small/frame-70.webp 640w, ./assets/photos/frame-70.webp 1350w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-70.webp" width="1350" height="1800" loading="lazy" decoding="async" alt="A person standing beneath a red torii gate at the edge of a lake" />
+            </a>
+            <figcaption><span>Frame 18</span><time datetime="2023-12">December 2023</time></figcaption>
+          </figure>
+          <figure id="frame-71" data-photo-subject="city" data-photo-year="2023" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-71.webp">
+              <img srcset="./assets/photos/small/frame-71.webp 640w, ./assets/photos/frame-71.webp 1350w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-71.webp" width="1350" height="1800" loading="lazy" decoding="async" alt="Trains and passengers beneath repeating beams of a glass station roof" />
+            </a>
+            <figcaption><span>Frame 19</span><time datetime="2023-11">November 2023</time></figcaption>
+          </figure>
+          <figure id="frame-72" data-photo-subject="everyday" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-72.webp">
+              <img srcset="./assets/photos/small/frame-72.webp 640w, ./assets/photos/frame-72.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-72.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A paddler in a yellow kayak crossing textured blue water" />
+            </a>
+            <figcaption><span>Frame 20</span><time datetime="2026-08">August 2026</time></figcaption>
+          </figure>
+          <figure id="frame-42" data-photo-selected data-photo-subject="city" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-42.webp">
+              <img srcset="./assets/photos/small/frame-42.webp 640w, ./assets/photos/frame-42.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-42.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="An orange stairwell with angular railings" />
+            </a>
+            <figcaption><span>Frame 21</span><time datetime="2026-06">June 2026</time></figcaption>
+          </figure>
+          <figure id="frame-45" data-photo-subject="landscapes" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-45.webp">
+              <img srcset="./assets/photos/small/frame-45.webp 640w, ./assets/photos/frame-45.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-45.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A rainbow above a walkway across misty waterfalls" />
+            </a>
+            <figcaption><span>Frame 22</span><time datetime="2026-07">July 2026</time></figcaption>
+          </figure>
+          <figure id="frame-46" data-photo-subject="everyday" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-46.webp">
+              <img srcset="./assets/photos/small/frame-46.webp 640w, ./assets/photos/frame-46.webp 1200w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-46.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="A white alpaca wearing a colorful knitted garland" />
+            </a>
+            <figcaption><span>Frame 23</span><time datetime="2026-07">July 2026</time></figcaption>
+          </figure>
+          <figure id="frame-47" data-photo-selected data-photo-subject="landscapes" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-47.webp">
+              <img srcset="./assets/photos/small/frame-47.webp 640w, ./assets/photos/frame-47.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-47.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="Pale terraced salt pools descending through a mountain valley" />
+            </a>
+            <figcaption><span>Frame 24</span><time datetime="2026-07">July 2026</time></figcaption>
+          </figure>
+          <figure id="frame-49" data-photo-selected data-photo-subject="everyday" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-49.webp">
+              <img srcset="./assets/photos/small/frame-49.webp 640w, ./assets/photos/frame-49.webp 1280w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-49.webp" width="1280" height="853" loading="lazy" decoding="async" alt="Confetti above the stage and audience at a wave to earth concert" />
+            </a>
+            <figcaption><span>Frame 25</span><time datetime="2026-09">September 2026</time></figcaption>
+          </figure>
+          <figure id="frame-50" data-photo-subject="everyday" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-50.webp">
+              <img srcset="./assets/photos/small/frame-50.webp 640w, ./assets/photos/frame-50.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-50.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A person in an orange jacket lying in snow with arms outstretched" />
+            </a>
+            <figcaption><span>Frame 26</span><time datetime="2025-03">March 2025</time></figcaption>
+          </figure>
+          <figure id="frame-52" data-photo-selected data-photo-subject="city" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-52.webp">
+              <img srcset="./assets/photos/small/frame-52.webp 640w, ./assets/photos/frame-52.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-52.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="Striped cafe parasols beside an indoor pool seen from above" />
+            </a>
+            <figcaption><span>Frame 27</span><time datetime="2025-06">June 2025</time></figcaption>
+          </figure>
+          <figure id="frame-37" data-photo-selected data-photo-subject="city" data-photo-year="2026" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-37.webp">
+              <img srcset="./assets/photos/small/frame-37.webp 640w, ./assets/photos/frame-37.webp 1200w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-37.webp" width="1200" height="1800" loading="lazy" decoding="async" alt="White and orange traffic light trails curving toward a city skyline at night" />
+            </a>
+            <figcaption><span>Frame 28</span><time datetime="2026-09">September 2026</time></figcaption>
+          </figure>
+          <figure id="frame-38" data-photo-selected data-photo-subject="city" data-photo-year="2025" class="photo-item">
+            <a class="photo-button" data-gallery-item href="./assets/photos/frame-38.webp">
+              <img srcset="./assets/photos/small/frame-38.webp 640w, ./assets/photos/frame-38.webp 1800w" sizes="(max-width: 700px) 45vw, 30vw" src="./assets/photos/frame-38.webp" width="1800" height="1200" loading="lazy" decoding="async" alt="A brightly lit glass building and its geometric reflection in water at night" />
+            </a>
+            <figcaption><span>Frame 29</span><time datetime="2025-02">February 2025</time></figcaption>
+          </figure>
           <figure
             id="frame-01"
+            data-photo-selected
             data-photo-subject="landscapes"
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="0"
+              href="./assets/photos/frame-01.webp"
             >
               <img
                 srcset="
@@ -148,9 +337,9 @@
                 decoding="async"
                 alt="Aurora ribbons above a silhouetted figure and trees"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 01</span><time datetime="2025-01">January 2025</time>
+              <span>Frame 30</span><time datetime="2025-01">January 2025</time>
             </figcaption>
           </figure>
           <figure
@@ -159,11 +348,11 @@
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="1"
+              href="./assets/photos/frame-02.webp"
             >
               <img
                 srcset="
@@ -178,9 +367,9 @@
                 decoding="async"
                 alt="A photographer standing in clear, shallow ocean water"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 02</span><time datetime="2025-06">June 2025</time>
+              <span>Frame 31</span><time datetime="2025-06">June 2025</time>
             </figcaption>
           </figure>
           <figure
@@ -189,11 +378,11 @@
             data-photo-year="2024"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="2"
+              href="./assets/photos/frame-03.webp"
             >
               <img
                 srcset="
@@ -208,9 +397,9 @@
                 decoding="async"
                 alt="An Alaska locomotive beside a lake and sunlit mountains"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 03</span><time datetime="2024-05">May 2024</time>
+              <span>Frame 32</span><time datetime="2024-05">May 2024</time>
             </figcaption>
           </figure>
           <figure
@@ -219,11 +408,11 @@
             data-photo-year="2024"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="3"
+              href="./assets/photos/frame-04.webp"
             >
               <img
                 srcset="
@@ -238,9 +427,9 @@
                 decoding="async"
                 alt="A photographer framing a hillside view beneath a bright sun"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 04</span><time datetime="2024-06">June 2024</time>
+              <span>Frame 33</span><time datetime="2024-06">June 2024</time>
             </figcaption>
           </figure>
           <figure
@@ -249,11 +438,11 @@
             data-photo-year="2024"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="4"
+              href="./assets/photos/frame-05.webp"
             >
               <img
                 srcset="
@@ -268,9 +457,9 @@
                 decoding="async"
                 alt="Downtown Los Angeles under a soft pink and blue evening sky"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 05</span><time datetime="2024-06">June 2024</time>
+              <span>Frame 34</span><time datetime="2024-06">June 2024</time>
             </figcaption>
           </figure>
           <figure
@@ -279,11 +468,11 @@
             data-photo-year="2024"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="5"
+              href="./assets/photos/frame-06.webp"
             >
               <img
                 srcset="
@@ -298,9 +487,9 @@
                 decoding="async"
                 alt="Red and green fireworks expanding above a city at night"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 06</span><time datetime="2024-07">July 2024</time>
+              <span>Frame 35</span><time datetime="2024-07">July 2024</time>
             </figcaption>
           </figure>
           <figure
@@ -309,11 +498,11 @@
             data-photo-year="2024"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="6"
+              href="./assets/photos/frame-07.webp"
             >
               <img
                 srcset="
@@ -328,9 +517,9 @@
                 decoding="async"
                 alt="A colorful ocean pier and Ferris wheel in evening light"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 07</span><time datetime="2024-07">July 2024</time>
+              <span>Frame 36</span><time datetime="2024-07">July 2024</time>
             </figcaption>
           </figure>
           <figure
@@ -339,11 +528,11 @@
             data-photo-year="2024"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="7"
+              href="./assets/photos/frame-08.webp"
             >
               <img
                 srcset="
@@ -358,22 +547,23 @@
                 decoding="async"
                 alt="A baseball player walking across the outfield"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 08</span><time datetime="2024-08">August 2024</time>
+              <span>Frame 37</span><time datetime="2024-08">August 2024</time>
             </figcaption>
           </figure>
           <figure
             id="frame-09"
+            data-photo-selected
             data-photo-subject="landscapes"
             data-photo-year="2024"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="8"
+              href="./assets/photos/frame-09.webp"
             >
               <img
                 srcset="
@@ -388,9 +578,9 @@
                 decoding="async"
                 alt="Long-exposure figures standing along a moonlit shoreline"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 09</span><time datetime="2024-08">August 2024</time>
+              <span>Frame 38</span><time datetime="2024-08">August 2024</time>
             </figcaption>
           </figure>
           <figure
@@ -399,11 +589,11 @@
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="9"
+              href="./assets/photos/frame-10.webp"
             >
               <img
                 srcset="
@@ -418,9 +608,9 @@
                 decoding="async"
                 alt="Vivid green aurora sweeping across a starry sky"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 10</span><time datetime="2025-01">January 2025</time>
+              <span>Frame 39</span><time datetime="2025-01">January 2025</time>
             </figcaption>
           </figure>
           <figure
@@ -429,11 +619,11 @@
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="10"
+              href="./assets/photos/frame-11.webp"
             >
               <img
                 srcset="
@@ -448,9 +638,9 @@
                 decoding="async"
                 alt="Green and violet aurora above a snowy horizon"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 11</span><time datetime="2025-01">January 2025</time>
+              <span>Frame 40</span><time datetime="2025-01">January 2025</time>
             </figcaption>
           </figure>
           <figure
@@ -459,11 +649,11 @@
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="11"
+              href="./assets/photos/frame-12.webp"
             >
               <img
                 srcset="
@@ -478,22 +668,23 @@
                 decoding="async"
                 alt="An assortment of sushi arranged on a wooden tray"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 12</span><time datetime="2025-06">June 2025</time>
+              <span>Frame 41</span><time datetime="2025-06">June 2025</time>
             </figcaption>
           </figure>
           <figure
             id="frame-13"
+            data-photo-selected
             data-photo-subject="everyday"
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="12"
+              href="./assets/photos/frame-13.webp"
             >
               <img
                 srcset="
@@ -508,9 +699,9 @@
                 decoding="async"
                 alt="Silhouetted people layered through a warm reflective surface"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 13</span><time datetime="2025-06">June 2025</time>
+              <span>Frame 42</span><time datetime="2025-06">June 2025</time>
             </figcaption>
           </figure>
           <figure
@@ -519,11 +710,11 @@
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="13"
+              href="./assets/photos/frame-14.webp"
             >
               <img
                 srcset="
@@ -538,22 +729,23 @@
                 decoding="async"
                 alt="People crossing a circular illuminated floor installation"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 14</span><time datetime="2025-06">June 2025</time>
+              <span>Frame 43</span><time datetime="2025-06">June 2025</time>
             </figcaption>
           </figure>
           <figure
             id="frame-15"
+            data-photo-selected
             data-photo-subject="city"
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="14"
+              href="./assets/photos/frame-15.webp"
             >
               <img
                 srcset="
@@ -568,9 +760,9 @@
                 decoding="async"
                 alt="A red-sailed boat crossing Hong Kong harbour"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 15</span><time datetime="2025-06">June 2025</time>
+              <span>Frame 44</span><time datetime="2025-06">June 2025</time>
             </figcaption>
           </figure>
           <figure
@@ -579,11 +771,11 @@
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="15"
+              href="./assets/photos/frame-16.webp"
             >
               <img
                 srcset="
@@ -598,22 +790,23 @@
                 decoding="async"
                 alt="A broad mountain valley divided by a winding river"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 16</span><time datetime="2025-07">July 2025</time>
+              <span>Frame 45</span><time datetime="2025-07">July 2025</time>
             </figcaption>
           </figure>
           <figure
             id="frame-17"
+            data-photo-selected
             data-photo-subject="landscapes"
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="16"
+              href="./assets/photos/frame-17.webp"
             >
               <img
                 srcset="
@@ -628,9 +821,9 @@
                 decoding="async"
                 alt="Snow-streaked mountains reflected in a still lake"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 17</span><time datetime="2025-07">July 2025</time>
+              <span>Frame 46</span><time datetime="2025-07">July 2025</time>
             </figcaption>
           </figure>
           <figure
@@ -639,11 +832,11 @@
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="17"
+              href="./assets/photos/frame-18.webp"
             >
               <img
                 srcset="
@@ -658,9 +851,9 @@
                 decoding="async"
                 alt="A golf fairway lined with spectators beneath a wide blue sky"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 18</span
+              <span>Frame 47</span
               ><time datetime="2025-09">September 2025</time>
             </figcaption>
           </figure>
@@ -670,11 +863,11 @@
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="18"
+              href="./assets/photos/frame-19.webp"
             >
               <img
                 srcset="
@@ -689,22 +882,23 @@
                 decoding="async"
                 alt="Aircraft flying over a stadium ceremony and giant flag"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 19</span><time datetime="2025-10">October 2025</time>
+              <span>Frame 48</span><time datetime="2025-10">October 2025</time>
             </figcaption>
           </figure>
           <figure
             id="frame-20"
+            data-photo-selected
             data-photo-subject="city"
             data-photo-year="2025"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="19"
+              href="./assets/photos/frame-20.webp"
             >
               <img
                 srcset="
@@ -719,22 +913,23 @@
                 decoding="async"
                 alt="A rainy city street reflected in a pavement puddle at night"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 20</span><time datetime="2025-11">November 2025</time>
+              <span>Frame 49</span><time datetime="2025-11">November 2025</time>
             </figcaption>
           </figure>
           <figure
             id="frame-21"
+            data-photo-selected
             data-photo-subject="everyday"
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="20"
+              href="./assets/photos/frame-21.webp"
             >
               <img
                 srcset="
@@ -749,9 +944,9 @@
                 decoding="async"
                 alt="A spaniel framed by white calla lilies"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 21</span><time datetime="2026-02">February 2026</time>
+              <span>Frame 50</span><time datetime="2026-02">February 2026</time>
             </figcaption>
           </figure>
           <figure
@@ -760,11 +955,11 @@
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="21"
+              href="./assets/photos/frame-22.webp"
             >
               <img
                 srcset="
@@ -779,9 +974,9 @@
                 decoding="async"
                 alt="A coastal lighthouse below a long descending path"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 22</span><time datetime="2026-02">February 2026</time>
+              <span>Frame 51</span><time datetime="2026-02">February 2026</time>
             </figcaption>
           </figure>
           <figure
@@ -790,11 +985,11 @@
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="22"
+              href="./assets/photos/frame-24.webp"
             >
               <img
                 srcset="
@@ -809,9 +1004,9 @@
                 decoding="async"
                 alt="A small boat crossing a deep blue mountain lake"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 24</span><time datetime="2026-06">June 2026</time>
+              <span>Frame 52</span><time datetime="2026-06">June 2026</time>
             </figcaption>
           </figure>
           <figure
@@ -820,11 +1015,11 @@
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="23"
+              href="./assets/photos/frame-25.webp"
             >
               <img
                 srcset="
@@ -839,9 +1034,9 @@
                 decoding="async"
                 alt="A broad city avenue leading toward a distant obelisk"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 25</span><time datetime="2026-06">June 2026</time>
+              <span>Frame 53</span><time datetime="2026-06">June 2026</time>
             </figcaption>
           </figure>
           <figure
@@ -850,11 +1045,11 @@
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="24"
+              href="./assets/photos/frame-26.webp"
             >
               <img
                 srcset="
@@ -869,9 +1064,9 @@
                 decoding="async"
                 alt="A person waving Uruguay's flag beside a quiet harbour"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 26</span><time datetime="2026-06">June 2026</time>
+              <span>Frame 54</span><time datetime="2026-06">June 2026</time>
             </figcaption>
           </figure>
           <figure
@@ -880,11 +1075,11 @@
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="25"
+              href="./assets/photos/frame-27.webp"
             >
               <img
                 srcset="
@@ -899,9 +1094,9 @@
                 decoding="async"
                 alt="A small bird standing inside a glass-walled pavilion"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 27</span><time datetime="2026-07">July 2026</time>
+              <span>Frame 55</span><time datetime="2026-07">July 2026</time>
             </figcaption>
           </figure>
           <figure
@@ -910,11 +1105,11 @@
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="26"
+              href="./assets/photos/frame-28.webp"
             >
               <img
                 srcset="
@@ -929,39 +1124,9 @@
                 decoding="async"
                 alt="A boat below a sweeping wall of tropical waterfalls"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 28</span><time datetime="2026-07">July 2026</time>
-            </figcaption>
-          </figure>
-          <figure
-            id="frame-29"
-            data-photo-subject="landscapes"
-            data-photo-year="2026"
-            class="photo-item"
-          >
-            <button
-              class="photo-button"
-              type="button"
-              data-gallery-item
-              data-index="27"
-            >
-              <img
-                srcset="
-                  ./assets/photos/small/frame-29.webp  640w,
-                  ./assets/photos/frame-29.webp       1200w
-                "
-                sizes="(max-width: 700px) 45vw, 30vw"
-                src="./assets/photos/frame-29.webp"
-                width="1200"
-                height="1800"
-                loading="lazy"
-                decoding="async"
-                alt="Terraced salt pools descending through a mountain valley"
-              />
-            </button>
-            <figcaption>
-              <span>Frame 29</span><time datetime="2026-07">July 2026</time>
+              <span>Frame 56</span><time datetime="2026-07">July 2026</time>
             </figcaption>
           </figure>
           <figure
@@ -970,11 +1135,11 @@
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="28"
+              href="./assets/photos/frame-30.webp"
             >
               <img
                 srcset="
@@ -989,9 +1154,9 @@
                 decoding="async"
                 alt="A mountain town built along a narrow rocky stream"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 30</span><time datetime="2026-07">July 2026</time>
+              <span>Frame 57</span><time datetime="2026-07">July 2026</time>
             </figcaption>
           </figure>
           <figure
@@ -1000,11 +1165,11 @@
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="29"
+              href="./assets/photos/frame-31.webp"
             >
               <img
                 srcset="
@@ -1019,52 +1184,23 @@
                 decoding="async"
                 alt="Railway tracks running between shops in a mountain town"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 31</span><time datetime="2026-07">July 2026</time>
-            </figcaption>
-          </figure>
-          <figure
-            id="frame-32"
-            data-photo-subject="landscapes"
-            data-photo-year="2026"
-            class="photo-item"
-          >
-            <button
-              class="photo-button"
-              type="button"
-              data-gallery-item
-              data-index="30"
-            >
-              <img
-                srcset="
-                  ./assets/photos/small/frame-32.webp  640w,
-                  ./assets/photos/frame-32.webp       1200w
-                "
-                sizes="(max-width: 700px) 45vw, 30vw"
-                src="./assets/photos/frame-32.webp"
-                width="1200"
-                height="1800"
-                loading="lazy"
-                decoding="async"
-                alt="A small formation of birds crossing an open blue sky"
-              />
-            </button>
-            <figcaption>
-              <span>Frame 32</span><time datetime="2026-07">July 2026</time>
+              <span>Frame 58</span><time datetime="2026-07">July 2026</time>
             </figcaption>
           </figure>
           <figure
             id="frame-33"
+            data-photo-selected
             data-photo-subject="everyday"
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="31"
+              href="./assets/photos/frame-33.webp"
             >
               <img
                 srcset="
@@ -1079,9 +1215,9 @@
                 decoding="async"
                 alt="A rose garden glowing at sunset"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 33</span><time datetime="2026-07">July 2026</time>
+              <span>Frame 59</span><time datetime="2026-07">July 2026</time>
             </figcaption>
           </figure>
           <figure
@@ -1090,11 +1226,11 @@
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="32"
+              href="./assets/photos/frame-34.webp"
             >
               <img
                 srcset="
@@ -1109,22 +1245,23 @@
                 decoding="async"
                 alt="A dense patch of white daisies in sunlight"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 34</span><time datetime="2026-08">August 2026</time>
+              <span>Frame 60</span><time datetime="2026-08">August 2026</time>
             </figcaption>
           </figure>
           <figure
             id="frame-35"
+            data-photo-selected
             data-photo-subject="everyday"
             data-photo-year="2026"
             class="photo-item"
           >
-            <button
+            <a
               class="photo-button"
-              type="button"
               data-gallery-item
               data-index="33"
+              href="./assets/photos/frame-35.webp"
             >
               <img
                 srcset="
@@ -1139,9 +1276,9 @@
                 decoding="async"
                 alt="A pigeon perched beside a weathered blue valve"
               />
-            </button>
+            </a>
             <figcaption>
-              <span>Frame 35</span><time datetime="2026-08">August 2026</time>
+              <span>Frame 61</span><time datetime="2026-08">August 2026</time>
             </figcaption>
           </figure>
         </div>
@@ -1171,6 +1308,16 @@
           <a class="contact-link" href="mailto:davidmwong2021@gmail.com"
             >Email me <span aria-hidden="true">↗</span></a
           >
+          <div class="contact-copy">
+            <span>davidmwong2021@gmail.com</span
+            ><button type="button" data-copy-email hidden>Copy email</button>
+          </div>
+          <p
+            class="contact-copy-status"
+            role="status"
+            aria-atomic="true"
+            data-copy-email-status
+          ></p>
           <p>You can also find me on LinkedIn, GitHub, and Instagram.</p>
         </div>
       </div>
@@ -1210,7 +1357,7 @@
 
     <dialog class="photo-lightbox" data-lightbox aria-label="Photograph viewer">
       <div class="lightbox-bar">
-        <p data-lightbox-count>01 / 34</p>
+        <p data-lightbox-count>01 / 61</p>
         <button type="button" data-lightbox-close>
           Close <span aria-hidden="true">×</span>
         </button>
@@ -1226,6 +1373,17 @@
         <button type="button" data-lightbox-next>
           Next <span aria-hidden="true">→</span>
         </button>
+      </div>
+      <div class="lightbox-actions">
+        <button type="button" data-photo-copy>Copy photo link</button>
+        <a data-photo-question href="mailto:davidmwong2021@gmail.com"
+          >Ask me about this photo ↗</a
+        >
+        <p role="status" aria-atomic="true" data-photo-share-status></p>
+        <label class="photo-link-fallback" data-photo-link-fallback hidden>
+          Select and copy this link
+          <input type="text" readonly data-photo-link-input />
+        </label>
       </div>
     </dialog>
   </body>

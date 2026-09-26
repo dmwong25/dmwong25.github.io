@@ -24,6 +24,7 @@ const savedFilter = document.querySelector("[data-saved-filter]");
 const savedCount = document.querySelector("[data-saved-count]");
 const saveNote = document.querySelector("[data-save-note]");
 const savedKey = "david-wong:photo-favorites:v1";
+const photoSearch = document.querySelector("[data-photo-search]");
 const validPhotoIds = new Set(photoFigures.map((figure) => figure.id));
 let savedPhotos = new Set();
 let savedOnly = false;
@@ -46,11 +47,21 @@ const updateSavedControls = () => {
 const filterPhotos = (year) => {
   activeYear = year;
   const subject = subjectFilter?.value || "all";
+  const terms = (photoSearch?.value || "")
+    .trim()
+    .toLocaleLowerCase()
+    .split(/\s+/)
+    .filter(Boolean);
   photoFigures.forEach((figure) => {
+    const description =
+      `${figure.querySelector("img")?.alt || ""} ${figure.querySelector("figcaption")?.textContent || ""} ${figure.dataset.photoSubject} ${figure.dataset.photoYear}`.toLocaleLowerCase();
     figure.hidden =
       (year !== "all" && figure.dataset.photoYear !== year) ||
-      (subject !== "all" && figure.dataset.photoSubject !== subject) ||
-      (savedOnly && !savedPhotos.has(figure.id));
+      (subject === "selected"
+        ? !figure.hasAttribute("data-photo-selected")
+        : subject !== "all" && figure.dataset.photoSubject !== subject) ||
+      (savedOnly && !savedPhotos.has(figure.id)) ||
+      !terms.every((term) => description.includes(term));
   });
   filters.forEach((button) =>
     button.setAttribute("aria-pressed", String(button.dataset.filter === year)),
@@ -95,6 +106,7 @@ updateSavedControls();
 resetGallery?.addEventListener("click", () => {
   savedOnly = false;
   if (subjectFilter) subjectFilter.value = "all";
+  if (photoSearch) photoSearch.value = "";
   filterPhotos("all");
   filters.find((button) => button.dataset.filter === "all")?.focus();
 });
@@ -103,6 +115,7 @@ filters.forEach((button) =>
 );
 if (toolbar) toolbar.hidden = false;
 subjectFilter?.addEventListener("change", () => filterPhotos(activeYear));
+photoSearch?.addEventListener("input", () => filterPhotos(activeYear));
 
 // A shared photo link must stay reachable even after a year filter was selected.
 const revealLinkedPhoto = () => {
@@ -113,6 +126,7 @@ const revealLinkedPhoto = () => {
   if (target.hidden) {
     savedOnly = false;
     if (subjectFilter) subjectFilter.value = "all";
+    if (photoSearch) photoSearch.value = "";
     filterPhotos("all");
   }
   target.scrollIntoView({ block: "start", behavior: "instant" });
@@ -127,7 +141,13 @@ if (galleryItems.length && lightbox) {
   const close = lightbox.querySelector("[data-lightbox-close]");
   const previous = lightbox.querySelector("[data-lightbox-previous]");
   const next = lightbox.querySelector("[data-lightbox-next]");
+  const copyPhoto = lightbox.querySelector("[data-photo-copy]");
+  const askPhoto = lightbox.querySelector("[data-photo-question]");
+  const shareStatus = lightbox.querySelector("[data-photo-share-status]");
+  const linkFallback = lightbox.querySelector("[data-photo-link-fallback]");
+  const linkInput = lightbox.querySelector("[data-photo-link-input]");
   let activeIndex = 0;
+  let photoUrl = "";
   let opener;
   const render = (index) => {
     activeIndex = (index + visibleItems.length) % visibleItems.length;
@@ -136,16 +156,41 @@ if (galleryItems.length && lightbox) {
     const figureCaption = item.closest("figure").querySelector("figcaption");
     image.src = source.src;
     image.alt = source.alt;
-    caption.textContent = `${figureCaption.querySelector("span").textContent} · ${figureCaption.querySelector("time").textContent}`;
+    caption.textContent = `${source.alt} · ${figureCaption.querySelector("span").textContent} · ${figureCaption.querySelector("time").textContent}`;
+    photoUrl = new URL(
+      `archive.html#${item.closest("figure").id}`,
+      document.baseURI,
+    ).href;
+    askPhoto.href = `mailto:davidmwong2021@gmail.com?subject=${encodeURIComponent(`About your photograph: ${figureCaption.querySelector("span").textContent}`)}&body=${encodeURIComponent(`Hi David,\n\nI was looking at this photograph: ${source.alt}\n${photoUrl}\n\n`)}`;
+    shareStatus.textContent = "";
+    linkFallback.hidden = true;
     count.textContent = `${String(activeIndex + 1).padStart(2, "0")} / ${String(visibleItems.length).padStart(2, "0")}`;
   };
   galleryItems.forEach((item) => {
-    item.addEventListener("click", () => {
+    item.addEventListener("click", (event) => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)
+        return;
+      event.preventDefault();
       opener = item;
       render(visibleItems.indexOf(item));
       lightbox.showModal();
       document.body.classList.add("lightbox-open");
     });
+  });
+  copyPhoto.addEventListener("click", async () => {
+    const url = photoUrl;
+    try {
+      await navigator.clipboard.writeText(url);
+      if (!lightbox.open || photoUrl !== url) return;
+      shareStatus.textContent = "Photo link copied.";
+    } catch {
+      if (!lightbox.open || photoUrl !== url) return;
+      linkInput.value = url;
+      linkFallback.hidden = false;
+      linkInput.focus();
+      linkInput.select();
+      shareStatus.textContent = "Copy the link below to share this photograph.";
+    }
   });
   close.addEventListener("click", () => lightbox.close());
   previous.addEventListener("click", () => render(activeIndex - 1));
@@ -159,9 +204,29 @@ if (galleryItems.length && lightbox) {
     opener?.focus({ preventScroll: true });
   });
   lightbox.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+    if (
+      !event.target.matches("input, textarea") &&
+      (event.key === "ArrowLeft" || event.key === "ArrowRight")
+    ) {
       event.preventDefault();
       render(activeIndex + (event.key === "ArrowLeft" ? -1 : 1));
     }
   });
 }
+
+const copyEmailButtons = document.querySelectorAll("[data-copy-email]");
+copyEmailButtons.forEach((button) => {
+  button.hidden = false;
+  button.addEventListener("click", async () => {
+    const status = button
+      .closest(".footer-contact")
+      .querySelector("[data-copy-email-status]");
+    try {
+      await navigator.clipboard.writeText("davidmwong2021@gmail.com");
+      status.textContent = "Email address copied.";
+    } catch {
+      status.textContent =
+        "Select and copy the email address above, or use the Email me link.";
+    }
+  });
+});

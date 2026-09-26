@@ -17,11 +17,78 @@ export function createSongDraw(tracks, random = Math.random) {
   };
 }
 
+export function validateSongLibrary(tracks) {
+  if (!Array.isArray(tracks) || !tracks.length)
+    throw new Error("The song collection must contain at least one track");
+
+  const hasText = (value) =>
+    typeof value === "string" && value.trim().length > 0;
+  const isPublicLink = (value, type) =>
+    typeof value === "string" &&
+    new RegExp(`^https://open\\.spotify\\.com/${type}/[A-Za-z0-9]+$`).test(
+      value,
+    );
+  const isImageLink = (value) => {
+    if (typeof value !== "string") return false;
+    try {
+      const url = new URL(value);
+      return url.protocol === "https:" && !url.username && !url.password;
+    } catch {
+      return false;
+    }
+  };
+  const seen = new Set();
+  for (const track of tracks) {
+    if (
+      !track ||
+      !hasText(track.title) ||
+      !isPublicLink(track.url, "track") ||
+      seen.has(track.url) ||
+      !Array.isArray(track.artists) ||
+      !track.artists.length ||
+      track.artists.some(
+        (artist) =>
+          !artist ||
+          !hasText(artist.name) ||
+          !isPublicLink(artist.url, "artist"),
+      ) ||
+      ["cover", "coverFallback"].some(
+        (key) => track[key] !== undefined && !isImageLink(track[key]),
+      )
+    ) {
+      throw new Error(
+        "The song collection contains an invalid or duplicate track",
+      );
+    }
+    seen.add(track.url);
+  }
+  return tracks;
+}
+
+export async function loadSongLibrary({
+  fetcher = globalThis.fetch,
+  timeoutMs = 10000,
+} = {}) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    const response = await fetcher("./content/liked-songs.json", {
+      signal: controller.signal,
+    });
+    if (!response.ok) throw new Error("Could not load songs");
+    return validateSongLibrary(await response.json());
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 const picker =
   typeof document !== "undefined" &&
   document.querySelector("[data-song-picker]");
 if (picker) {
   picker.hidden = false;
+  const pickerNav = document.querySelector("[data-picker-nav]");
+  if (pickerNav) pickerNav.hidden = false;
   const button = picker.querySelector("[data-pick-song]");
   const status = picker.querySelector("[data-picker-status]");
   const result = picker.querySelector("[data-song-result]");
@@ -40,11 +107,7 @@ if (picker) {
     try {
       if (!draw) {
         status.textContent = "Opening my song collection…";
-        const response = await fetch("./content/liked-songs.json");
-        if (!response.ok) throw new Error("Could not load songs");
-        const tracks = await response.json();
-        if (!Array.isArray(tracks) || !tracks.length)
-          throw new Error("No songs available");
+        const tracks = await loadSongLibrary();
         total = tracks.length;
         draw = createSongDraw(tracks);
       }
@@ -58,7 +121,10 @@ if (picker) {
         image.width = 160;
         image.height = 160;
         image.addEventListener("error", () => {
-          if (track.coverFallback && image.getAttribute("src") !== track.coverFallback) {
+          if (
+            track.coverFallback &&
+            image.getAttribute("src") !== track.coverFallback
+          ) {
             image.src = track.coverFallback;
           } else {
             image.remove();
