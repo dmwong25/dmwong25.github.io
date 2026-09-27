@@ -58,6 +58,10 @@ Visible captions now run consecutively from Frame 01 through Frame 61 in gallery
 
 ## Gallery maintenance
 
+### September 26 quality pass
+
+Seven photographs now use reviewed darktable exports: stable assets 37, 38, 49, 58, 61, 62, and 67. Five received denoising and two gentle lens deblurring. Their full WebP copies use quality 90 and responsive copies quality 85, with unchanged dimensions and no embedded metadata. All source JPEGs remain unchanged. See [the quality-pass record](../../docs/photo-quality-2026-09-26.md) for the tool comparison, visible frame numbers, settings, and preservation details.
+
 Gallery order, consecutive display captions, alternative text, dates, stable frame IDs, and year-filter metadata are maintained in `archive.html`. When adding or removing photographs, renumber the display captions in gallery order without changing IDs or asset filenames. Update any cross-page accessible labels that name a frame. The portrait remains in `about.html`; selected previews also appear in `index.html`.
 
 `small/` contains 640-pixel-wide responsive WebP copies generated from these metadata-free web images. Rebuild them with `python scripts/optimize_images.py` (Pillow required). Keep `srcset` and `sizes` on image tags when adding photos. The viewer uses the full-size `src`, while the browser selects a responsive source for thumbnails. Do not rename existing frame IDs, because homepage links point to them.
