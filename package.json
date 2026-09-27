@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "check": "node --check site.js && node scripts/check.mjs",
+    "check": "node --check site.js && node --check song-picker.js && node scripts/check.mjs && node scripts/check-song-picker.mjs && node scripts/check-server.mjs",
     "build:recommendations": "node scripts/build-recommendations.mjs"
   }
 }
