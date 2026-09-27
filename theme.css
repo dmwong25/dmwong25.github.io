@@ -427,36 +427,76 @@ em {
 .lightbox-controls button:hover {
   background: #354f66;
 }
-.shelf-preview {
+.home-section.home-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 45px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: start;
+  padding-block: 52px;
+}
+.home-split h2 {
+  margin-bottom: 0;
+}
+.home-split > div > .eyebrow {
+  margin-bottom: 18px;
+}
+.home-split .personal-note-copy p {
+  max-width: 60ch;
+  line-height: 1.8;
+}
+.shelf-preview {
+  border-top: 1px solid var(--line);
 }
 .shelf-preview > div > p:not(.eyebrow) {
   max-width: 400px;
   font-size: 15px;
   margin-top: 16px;
 }
-.record-preview {
-  padding: 25px;
-  background: #f5f3e9;
-  border: 1px solid #c6d0d5;
+.song-preview {
+  padding: clamp(22px, 3vw, 32px);
+  background: var(--paper);
+  border: 1px solid var(--line);
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 25px;
-  align-items: center;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
   text-decoration: none;
-  box-shadow: 4px 5px 0 #d3dce0;
+  transition: background-color 160ms ease, border-color 160ms ease;
 }
-.record-preview h3 {
-  font: 29px var(--font-serif);
-  margin-top: 10px;
+.song-preview:hover {
+  background: var(--accent-blue-soft);
+  border-color: var(--accent);
 }
-.record-preview p {
-  font-size: 13px;
+.song-preview:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+.song-preview-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--accent-blue);
+}
+.song-preview h3 {
+  font: 32px/1.15 var(--font-serif);
+  margin-top: 12px;
+}
+.song-preview p {
+  font-size: 15px;
+  line-height: 1.7;
   color: var(--ink-soft);
-  margin-top: 10px;
+  margin-top: 12px;
+}
+.song-preview-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 22px;
+  font-size: 13px;
+  font-weight: 500;
 }
 .record-disc {
   height: 135px;
@@ -619,14 +659,6 @@ em {
   .recommendation-grid {
     grid-template-columns: 1fr;
   }
-  .record-preview {
-    grid-template-columns: 100px 1fr;
-    gap: 16px;
-  }
-  .record-preview .record-disc {
-    width: 100px;
-    height: 100px;
-  }
   .hero {
     gap: 15px 5%;
   }
@@ -770,13 +802,18 @@ em {
   .gallery-toolbar > p {
     font-size: 11px;
   }
-  .shelf-preview {
+  .home-section.home-split {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 24px;
+    padding-block: 36px;
   }
-  .record-preview {
-    grid-template-columns: 110px 1fr;
-    padding: 20px;
+  .song-preview {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .song-preview-icon {
+    width: 40px;
+    height: 40px;
   }
   .notes-preview h2 {
     font-size: 29px;

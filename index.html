@@ -36,7 +36,7 @@
       content="A mountain valley photographed by David Wong"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="./theme.css" />
+    <link rel="stylesheet" href="./theme.css?v=home-layout-20260926" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -300,10 +300,12 @@
           >
         </div>
       </section>
-      <section class="home-section personal-note">
-        <p class="eyebrow">About</p>
+      <section class="home-section home-split personal-note">
         <div>
+          <p class="eyebrow">About</p>
           <h2>A bit about me.</h2>
+        </div>
+        <div class="personal-note-copy">
           <p>
             I studied computer science at Pomona College, where I played varsity
             golf and took a black-and-white film photography class. I now live
@@ -314,7 +316,7 @@
           >
         </div>
       </section>
-      <section class="home-section shelf-preview">
+      <section class="home-section home-split shelf-preview">
         <div>
           <p class="eyebrow">Music &amp; more</p>
           <h2>Favorites.</h2>
@@ -323,14 +325,19 @@
             >Browse favorites ↗</a
           >
         </div>
-        <a class="record-preview" href="./recommendations.html"
-          ><div class="record-disc" aria-hidden="true"><span>dw</span></div>
+        <a class="song-preview" href="./recommendations.html#song-picker">
+          <span class="song-preview-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 6h2c5 0 9 12 14 12h2M17 14l4 4-4 4M3 18h2c2 0 4-2 6-5M14 8c2-2 3-2 5-2h2M17 2l4 4-4 4" />
+            </svg>
+          </span>
           <div>
-            <span class="mono">01 / Music</span>
-            <h3>wave to earth</h3>
-            <p>The inspiration for this site’s visual direction.</p>
-          </div></a
-        >
+            <span class="eyebrow">On shuffle</span>
+            <h3>A song for your day.</h3>
+            <p>A random pick from my collection of liked songs.</p>
+            <span class="song-preview-link">Find your next listen <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
       </section>
       <section class="home-section notes-preview">
         <p class="eyebrow">From the notebook</p>
