@@ -94,7 +94,7 @@
           aria-label="Filter photographs by year"
         >
           <button type="button" data-filter="all" aria-pressed="true">
-            All years</button
+            All</button
           ><button type="button" data-filter="2026" aria-pressed="false">
             2026</button
           ><button type="button" data-filter="2025" aria-pressed="false">
@@ -123,6 +123,7 @@
           Saved photos <span data-saved-count>0</span>
         </button>
         <p class="mono" data-gallery-count role="status">61 photographs</p>
+        <button class="clear-filters" type="button" data-gallery-reset data-clear-filters hidden>Clear filters</button>
         <p class="gallery-save-note" data-save-note>
           Save photos with the heart button. Your picks stay in this browser.
         </p>
@@ -1364,6 +1365,10 @@
       </div>
       <figure class="lightbox-figure">
         <img data-lightbox-image alt="" />
+        <div class="photo-load-feedback">
+          <p role="status" data-photo-load-status></p>
+          <button type="button" data-photo-retry hidden>Try again</button>
+        </div>
         <figcaption data-lightbox-caption aria-live="polite"></figcaption>
       </figure>
       <div class="lightbox-controls" aria-label="Gallery controls">

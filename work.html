@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Selected work by David Wong, from revenue automation at PwC to event discovery, music maps, and nonprofit e-commerce."
+      content="David Wong’s work in revenue automation at PwC, Jimoa for iPhone, and projects in event discovery, music sharing, and nonprofit e-commerce."
     />
     <meta name="theme-color" content="#e9edf0" />
     <title>Work · David Wong</title>
@@ -24,7 +24,7 @@
     <meta property="og:title" content="Work · David Wong" />
     <meta
       property="og:description"
-      content="Selected work by David Wong, from revenue automation at PwC to event discovery, music maps, and nonprofit e-commerce."
+      content="David Wong’s work in revenue automation at PwC, Jimoa for iPhone, and projects in event discovery, music sharing, and nonprofit e-commerce."
     />
     <meta property="og:url" content="https://dmwong25.github.io/work.html" />
     <meta
@@ -64,12 +64,20 @@
 
     <main id="main" tabindex="-1">
       <div class="page-head">
-        <p class="eyebrow">Work · 2018—Present</p>
+        <p class="eyebrow">Work · 2018 to Present</p>
         <h1>Work &amp; <em>projects.</em></h1>
         <p class="page-intro">
-          My current work at PwC, followed by projects from college and my time
-          at Itara.
+          My work at PwC, the app I’m building, and projects from college and
+          my time at Itara.
         </p>
+        <nav class="work-jump-nav" aria-label="On this page">
+          <span class="mono">On this page</span>
+          <a href="#pwc">PwC</a>
+          <a href="#jimoa">Jimoa</a>
+          <a href="#p5c-events">P-5C Events</a>
+          <a href="#musicmap">MusicMap</a>
+          <a href="#itara">Itara</a>
+        </nav>
       </div>
 
       <section class="current-work" id="pwc" aria-labelledby="pwc-heading">
@@ -84,31 +92,40 @@
         </div>
         <p class="current-copy">
           I work in revenue automation within PwC’s DAT Tech &amp; Data team in
-          Silicon Valley. I build revenue-recognition and recast models,
-          investigate discrepancies in invoice and booking data, and develop
-          tools for recurring data-processing tasks.
+          Silicon Valley. My work connects revenue models, data validation,
+          and the tools used to run those processes.
         </p>
+        <section class="role-example" aria-labelledby="recast-heading">
+          <div>
+            <p class="eyebrow">Project example</p>
+            <h3 id="recast-heading">Revenue recast for audit preparation</h3>
+            <p>The client needed a revenue recast across a large volume of
+              booking and invoice records in preparation for an audit.</p>
+          </div>
+          <dl>
+            <div><dt>What I built</dt><dd>A custom solution that brought the booking and invoice records together, processed the recast, and reconciled the data.</dd></div>
+            <div><dt>What it produced</dt><dd>Journal entries and financial information prepared for the client’s audit.</dd></div>
+          </dl>
+        </section>
         <ul class="current-points">
           <li>
             <span>01</span>
             <div>
-              <h3>Revenue models &amp; validation</h3>
+              <h3>Revenue models</h3>
               <p>
-                I work across the Order-to-Earnings process, checking business
-                logic against millions of invoice and booking-line records. This
-                includes building revenue-recognition and recast models and
-                investigating where records do not reconcile.
+                I build revenue-recognition and recast models, check business
+                logic against millions of invoice and booking-line records, and
+                investigate records that do not reconcile.
               </p>
             </div>
           </li>
           <li>
             <span>02</span>
             <div>
-              <h3>Data-processing tools</h3>
+              <h3>Processing tools</h3>
               <p>
-                I build AI-assisted agents for data processing and tools for
-                identifying exceptions and reconciliation issues. I also develop
-                interfaces for process analysis.
+                I build AI-assisted processing agents, exception and
+                reconciliation tools, and interfaces for process analysis.
               </p>
             </div>
           </li>
@@ -117,82 +134,81 @@
             <div>
               <h3>Python workflows</h3>
               <p>
-                I rebuild legacy Alteryx transformations in Python, translating
-                existing processing logic into code that can be maintained and
-                used for recurring workflows.
+                I rebuild legacy Alteryx transformations in Python so recurring
+                processing logic can be maintained in code.
               </p>
             </div>
           </li>
         </ul>
       </section>
 
+      <section class="app-feature" id="jimoa" aria-labelledby="jimoa-heading">
+        <div class="app-feature-panel">
+          <div class="app-feature-copy">
+            <p class="eyebrow">Currently building · iPhone app</p>
+            <h2 id="jimoa-heading">Jimoa</h2>
+            <p class="app-feature-intro">I’m building an app for sharing music
+              and the places and memories connected to it.</p>
+            <p>A post starts with a song. Add a location, a few words, and
+              photos, then choose to share it with friends or publicly.</p>
+            <dl class="app-feature-details">
+              <div>
+                <dt>Music on a map</dt>
+                <dd>Browse posts on Home or explore the places people have
+                  connected to their songs.</dd>
+              </div>
+              <div>
+                <dt>A conversation around a song</dt>
+                <dd>Like, comment, and reply to posts, or bookmark them privately
+                  to come back to later.</dd>
+              </div>
+              <div>
+                <dt>A private Journal</dt>
+                <dd>Keep your own entries in a private space. An entry stays
+                  private unless you choose to share it.</dd>
+              </div>
+            </dl>
+            <a class="text-link app-beta-link" href="https://testflight.apple.com/join/cNnAdM93" target="_blank" rel="noreferrer">View the TestFlight beta ↗</a>
+            <p class="app-feature-status">In development · Feedback welcome</p>
+          </div>
+          <figure class="app-feature-visual">
+            <a href="./assets/projects/jimoa-app-preview.webp" target="_blank" rel="noreferrer" aria-label="View a larger Jimoa app preview">
+              <img src="./assets/projects/jimoa-app-preview.webp"
+                srcset="./assets/projects/jimoa-app-preview-small.webp 720w, ./assets/projects/jimoa-app-preview.webp 1440w"
+                sizes="(max-width: 700px) 85vw, (max-width: 1000px) 40vw, 420px"
+                width="1440" height="2560" loading="lazy" decoding="async"
+                alt="Jimoa app preview showing the Home feed, music map, and a Journal entry, with the headline Share a song. Keep a memory." />
+            </a>
+            <figcaption>Home, Map, and Journal · Select to view larger</figcaption>
+          </figure>
+        </div>
+      </section>
+
       <div class="page-head page-head-tight">
-        <p class="eyebrow">Project index</p>
+        <p class="eyebrow">Selected projects</p>
         <h2>Past projects.</h2>
         <p class="page-intro">
           Event discovery, music sharing, and an online storefront.
         </p>
       </div>
 
-      <nav class="index-list" aria-label="Project index">
-        <a class="index-row" href="#p5c-events">
-          <span class="index-num">01</span>
-          <span class="index-year">2023</span>
-          <span class="index-discipline">Full-stack · AI</span>
-          <span class="index-title">P-5C Events</span>
-          <span
-            class="index-preview"
-            style="--preview-tint: var(--accent-blue-soft)"
-            >01</span
-          >
-        </a>
-        <a class="index-row" href="#musicmap">
-          <span class="index-num">02</span>
-          <span class="index-year">2024</span>
-          <span class="index-discipline">Full-stack</span>
-          <span class="index-title">MusicMap</span>
-          <span
-            class="index-preview"
-            style="--preview-tint: var(--accent-teal-soft)"
-            >02</span
-          >
-        </a>
-        <a class="index-row" href="#itara">
-          <span class="index-num">03</span>
-          <span class="index-year">2018—2023</span>
-          <span class="index-discipline">Product · e-commerce</span>
-          <span class="index-title">Itara</span>
-          <span
-            class="index-preview"
-            style="--preview-tint: var(--accent-olive-soft)"
-            >03</span
-          >
-        </a>
-      </nav>
-
       <div class="work-spreads">
-        <article class="project-spread" id="p5c-events">
+        <article class="project-spread project-with-flow" id="p5c-events">
           <p class="index-num">01</p>
           <div>
             <h2>P-5C Events</h2>
-            <p class="project-meta">P-ai at the Claremont Colleges</p>
+            <p class="project-meta">Team project · P-ai at the Claremont Colleges</p>
             <p class="project-copy">
-              An event discovery platform for students at the five Claremont
-              Colleges.
+              An event discovery platform that brought campus emails into a
+              searchable collection of events for students at the five
+              Claremont Colleges.
             </p>
             <dl class="case-details">
               <div>
-                <dt>From email to event</dt>
+                <dt>The idea</dt>
                 <dd>
-                  It extracted events from campus emails and used the OpenAI API
-                  to create descriptions and labels.
-                </dd>
-              </div>
-              <div>
-                <dt>Recommendations</dt>
-                <dd>
-                  Students described their interests in their own words to find
-                  relevant events.
+                  Make events easier to find across five campuses, without
+                  requiring students to work through individual emails.
                 </dd>
               </div>
               <div>
@@ -214,9 +230,18 @@
               React · Flask · SQLAlchemy · OpenAI API · Docker
             </p>
           </div>
+          <figure class="project-flow events-flow">
+            <figcaption>Product flow · P-5C Events</figcaption>
+            <ol>
+              <li><span class="mono">01 / Input</span><strong>Campus emails</strong><p>Extract event information from incoming messages.</p></li>
+              <li><span class="mono">02 / Organize</span><strong>Event details</strong><p>Descriptions and labels created with the OpenAI API.</p></li>
+              <li><span class="mono">03 / Discover</span><strong>Interest-based matches</strong><p>Students describe what they’re interested in.</p></li>
+            </ol>
+            <p class="flow-caption">Concept diagram of the event-discovery flow.</p>
+          </figure>
         </article>
 
-        <article class="project-spread" id="musicmap">
+        <article class="project-spread project-with-flow" id="musicmap">
           <p class="index-num">02</p>
           <div>
             <h2>MusicMap</h2>
@@ -243,13 +268,20 @@
             >
             <p class="project-stack">React · MongoDB</p>
           </div>
+          <figure class="project-flow music-flow">
+            <figcaption>Product concept · MusicMap</figcaption>
+            <div class="map-motif" aria-hidden="true"><span>♪</span><span>♪</span><span>♪</span></div>
+            <p class="map-equation">A place. A song. A story.</p>
+            <p>Music posts connect a track and a personal story to a location on the map.</p>
+            <p class="flow-caption">Concept illustration of location-based music posts.</p>
+          </figure>
         </article>
 
         <article class="project-spread" id="itara">
           <p class="index-num">03</p>
           <div>
             <h2>Itara</h2>
-            <p class="project-meta">Product &amp; technology · 2018—2023</p>
+            <p class="project-meta">Product &amp; technology · 2018 to 2023</p>
             <p class="project-copy">
               An online store for a nonprofit selling artisan products made by
               Rwandan genocide survivors.
