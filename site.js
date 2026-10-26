@@ -19,7 +19,8 @@ let visibleItems = galleryItems;
 let activeYear = "all";
 const subjectFilter = document.querySelector("[data-subject-filter]");
 const emptyGallery = document.querySelector("[data-gallery-empty]");
-const resetGallery = document.querySelector("[data-gallery-reset]");
+const resetGalleryButtons = document.querySelectorAll("[data-gallery-reset]");
+const clearFilters = document.querySelector("[data-clear-filters]");
 const savedFilter = document.querySelector("[data-saved-filter]");
 const savedCount = document.querySelector("[data-saved-count]");
 const saveNote = document.querySelector("[data-save-note]");
@@ -70,6 +71,8 @@ const filterPhotos = (year) => {
   if (galleryCount)
     galleryCount.textContent = `${visibleItems.length} ${visibleItems.length === 1 ? "photograph" : "photographs"}`;
   if (emptyGallery) emptyGallery.hidden = visibleItems.length !== 0;
+  if (clearFilters)
+    clearFilters.hidden = year === "all" && subject === "all" && !savedOnly && !terms.length;
   updateSavedControls();
 };
 photoFigures.forEach((figure) => {
@@ -103,13 +106,13 @@ savedFilter?.addEventListener("click", () => {
   filterPhotos(activeYear);
 });
 updateSavedControls();
-resetGallery?.addEventListener("click", () => {
+resetGalleryButtons.forEach((button) => button.addEventListener("click", () => {
   savedOnly = false;
   if (subjectFilter) subjectFilter.value = "all";
   if (photoSearch) photoSearch.value = "";
   filterPhotos("all");
   filters.find((button) => button.dataset.filter === "all")?.focus();
-});
+}));
 filters.forEach((button) =>
   button.addEventListener("click", () => filterPhotos(button.dataset.filter)),
 );
@@ -146,6 +149,10 @@ if (galleryItems.length && lightbox) {
   const shareStatus = lightbox.querySelector("[data-photo-share-status]");
   const linkFallback = lightbox.querySelector("[data-photo-link-fallback]");
   const linkInput = lightbox.querySelector("[data-photo-link-input]");
+  const loadStatus = lightbox.querySelector("[data-photo-load-status]");
+  const retryImage = lightbox.querySelector("[data-photo-retry]");
+  const imageFrame = image.closest("figure");
+  let imageRequest = 0;
   let activeIndex = 0;
   let photoUrl = "";
   let opener;
@@ -154,6 +161,26 @@ if (galleryItems.length && lightbox) {
     const item = visibleItems[activeIndex];
     const source = item.querySelector("img");
     const figureCaption = item.closest("figure").querySelector("figcaption");
+    // Keep the previous photograph hidden until the current request is decoded.
+    // The request counter also prevents a slow earlier image from revealing itself.
+    const request = ++imageRequest;
+    imageFrame.setAttribute("aria-busy", "true");
+    image.style.visibility = "hidden";
+    loadStatus.textContent = "Loading photograph…";
+    retryImage.hidden = true;
+    image.onload = async () => {
+      try { await image.decode(); } catch { /* A loaded image can still be shown. */ }
+      if (request !== imageRequest || !image.naturalWidth) return;
+      image.style.visibility = "visible";
+      imageFrame.setAttribute("aria-busy", "false");
+      loadStatus.textContent = "";
+    };
+    image.onerror = () => {
+      if (request !== imageRequest) return;
+      imageFrame.setAttribute("aria-busy", "false");
+      loadStatus.textContent = "This photograph could not load. Try again or choose another.";
+      retryImage.hidden = false;
+    };
     image.src = source.src;
     image.alt = source.alt;
     caption.textContent = `${source.alt} · ${figureCaption.querySelector("span").textContent} · ${figureCaption.querySelector("time").textContent}`;
@@ -193,12 +220,19 @@ if (galleryItems.length && lightbox) {
     }
   });
   close.addEventListener("click", () => lightbox.close());
+  retryImage.addEventListener("click", () => {
+    image.removeAttribute("src");
+    render(activeIndex);
+  });
   previous.addEventListener("click", () => render(activeIndex - 1));
   next.addEventListener("click", () => render(activeIndex + 1));
   lightbox.addEventListener("click", (event) => {
     if (event.target === lightbox) lightbox.close();
   });
   lightbox.addEventListener("close", () => {
+    imageRequest++;
+    image.onload = null;
+    image.onerror = null;
     document.body.classList.remove("lightbox-open");
     image.removeAttribute("src");
     opener?.focus({ preventScroll: true });

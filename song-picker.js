@@ -150,7 +150,7 @@ if (picker) {
       status.replaceChildren();
       const announcement = document.createElement("span");
       announcement.className = "sr-only";
-      announcement.textContent = `${track.title} — ${track.artists.map((a) => a.name).join(", ")}. `;
+      announcement.textContent = `${track.title} by ${track.artists.map((a) => a.name).join(", ")}. `;
       status.append(
         announcement,
         `Picking from ${total} liked songs. No repeats until you’ve seen them all.`,
